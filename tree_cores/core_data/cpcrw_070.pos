@@ -1,0 +1,19 @@
+#DENDRO (Cybis Dendro program compatible format) Coordinate file written as C:\Users\d3x290\Desktop\Ben\cpcrw_070.pos
+#Imagefile cpcrw_070.bmp
+#DPI 1200.0
+#All coordinates in millimeters (mm)
+SCALE 1
+7.070,6.371 
+7.239,6.646 
+7.387,6.816 
+7.514,6.985 
+7.620,7.154 
+7.768,7.387 
+7.938,7.641 
+8.064,7.853 
+8.213,8.213 
+8.361,8.446 
+8.509,8.721 
+8.636,8.975 
+8.742,9.292 
+8.805,9.610 
