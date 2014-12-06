@@ -1,19 +1,16 @@
-# History files
+# R files - history, etc.
 .Rhistory
-
-# Example code in package build process
-*-Ex.R
-
-# R data files from past sessions
 .Rdata
+*.history
 
 # RStudio files
 .Rproj.user/
+*-Ex.R
 
+# OS files
 .DS_Store
 
-tree_cores/.Rapp.history
+# Image files (esp. tree scans)
+*.jpg
+*.tiff
 
-tree_survey/.Rapp.history
-
-tree_survey/vegsurvey1.pdf
