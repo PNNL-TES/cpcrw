@@ -1,0 +1,11 @@
+# Particularly bad-quality scans
+96
+106
+132
+191
+192
+229
+255
+275
+282
+289
