@@ -95,3 +95,14 @@ is.outlier <- function(x, devs=3.2) {
     x < lims[ 1 ] | x > lims[2]
 }
 
+
+
+if( !file.exists( OUTPUT_DIR ) ) {
+    printlog( "Creating", OUTPUT_DIR )
+    dir.create( OUTPUT_DIR )
+}
+if( !file.exists( LOG_DIR ) ) {
+    printlog( "Creating", LOG_DIR )
+    dir.create( LOG_DIR )
+}
+

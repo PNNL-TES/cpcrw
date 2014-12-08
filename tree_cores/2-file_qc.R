@@ -8,22 +8,16 @@
 
 # Ben Bond-Lamberty December 2014
 
-SCRIPTNAME		<- "1-file_qc.R"
+# Support functions and common definitions
+source("0-functions.R")
+
+SCRIPTNAME		<- "2-file_qc.R"
 IMAGE_DIR       <- "core_images/"
 DATA_DIR        <- "core_data/"
 COREDATA_FILE   <- "tree_cores.csv"
 
 # ==============================================================================
 # Main
-
-if(!file.exists(OUTPUT_DIR)) {
-	printlog("Creating", OUTPUT_DIR)
-	dir.create(OUTPUT_DIR)
-}
-if(!file.exists(LOG_DIR)) {
-	printlog("Creating", LOG_DIR)
-	dir.create(LOG_DIR)
-}
 
 sink(paste(LOG_DIR, paste0(SCRIPTNAME, ".txt"), sep="/"), split=T)
 

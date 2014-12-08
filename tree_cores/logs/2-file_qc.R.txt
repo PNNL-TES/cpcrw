@@ -1,0 +1,36 @@
+Sun Dec  7 21:59:49 2014  Welcome to 2-file_qc.R
+Sun Dec  7 21:59:49 2014  Reading image list...
+Sun Dec  7 21:59:50 2014  Reading data list...
+Sun Dec  7 21:59:50 2014  Reading tree core list...
+Sun Dec  7 21:59:50 2014  276 cores listed in tree_cores.csv
+Sun Dec  7 21:59:50 2014  68 image files found in core_images/
+Sun Dec  7 21:59:50 2014  68 data files found in core_data/
+Sun Dec  7 21:59:50 2014  67 cores with images
+Sun Dec  7 21:59:50 2014  67 cores with data
+Sun Dec  7 21:59:50 2014  67 images with data
+Sun Dec  7 21:59:50 2014  209 cores without images
+Sun Dec  7 21:59:50 2014  1 images without cores
+[1] "BC274"
+Sun Dec  7 21:59:50 2014  0 data without images
+Sun Dec  7 21:59:50 2014  1 data without cores
+[1] "BC274"
+Sun Dec  7 21:59:50 2014  No duplicate core numbers
+Sun Dec  7 21:59:50 2014  No duplicate image numbers
+Sun Dec  7 21:59:50 2014  No duplicate data numbers
+Sun Dec  7 21:59:50 2014  All done with 2-file_qc.R
+R version 3.1.2 (2014-10-31)
+Platform: x86_64-apple-darwin10.8.0 (64-bit)
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] plyr_1.8.1      reshape2_1.4    magrittr_1.0.1  ggplot2_0.9.3.1
+
+loaded via a namespace (and not attached):
+ [1] colorspace_1.2-4 digest_0.6.4     grid_3.1.2       gtable_0.1.2     labeling_0.2    
+ [6] MASS_7.3-35      munsell_0.4.2    proto_0.3-10     Rcpp_0.11.3      scales_0.2.4    
+[11] stringr_0.6.2    tools_3.1.2     

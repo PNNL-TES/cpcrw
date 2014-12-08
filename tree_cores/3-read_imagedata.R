@@ -7,7 +7,7 @@
 # Support functions and common definitions
 source("0-functions.R")
 
-SCRIPTNAME		<- "2-read_imagedata.R"
+SCRIPTNAME		<- "3-read_imagedata.R"
 INPUT_DIR       <- "core_data/"
 
 BADSCANS <- "scans_bad.txt"
@@ -16,15 +16,6 @@ BROKENSCANS <- "scans_broken.txt"
 
 # ==============================================================================
 # Main
-
-if(!file.exists(OUTPUT_DIR)) {
-    printlog("Creating", OUTPUT_DIR)
-    dir.create(OUTPUT_DIR)
-}
-if(!file.exists(LOG_DIR)) {
-    printlog("Creating", LOG_DIR)
-    dir.create(LOG_DIR)
-}
 
 sink(paste(LOG_DIR, paste0(SCRIPTNAME, ".txt"), sep="/"), split=T)
 
