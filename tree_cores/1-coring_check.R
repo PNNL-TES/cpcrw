@@ -54,6 +54,6 @@ dsum[dsum$inventory-dsum$cores > 1, "Exceeds"] <- "***"
 print(dsum)
 
 
-print( sessionInfo() )
 printlog( "All done with", SCRIPTNAME )
+print( sessionInfo() )
 sink()

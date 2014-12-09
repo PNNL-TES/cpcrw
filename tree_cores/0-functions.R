@@ -58,25 +58,11 @@ open_ncdf <- function(fn, datadir=".") {
 # -----------------------------------------------------------------------------
 # Open a csv file and return data
 read_csv <- function(fn, datadir=".", ...) {
-	fqfn <- paste(normalizePath(datadir), fn, sep="/")
+	fqfn <- paste(datadir, fn, sep="/")
 	printlog("Opening", fqfn)
 	stopifnot(file.exists(fqfn))
 	read.csv(fqfn, stringsAsFactors=F, ...)
 } # read_csv
-
-# -----------------------------------------------------------------------------
-# Load requested libraries
-loadlibs <- function(liblist) {
-	printlog("Loading libraries...")
-	loadedlibs <- vector()
-	for(lib in liblist) {
-		printlog("Loading", lib)
-		loadedlibs[ lib ] <- require(lib, character.only=T)
-		if(!loadedlibs[ lib ])
-			warning("this package is not installed!")
-	}
-	invisible(loadedlibs)
-} # loadlibs
 
 # -----------------------------------------------------------------------------
 # Read data from the clipboard

@@ -31,14 +31,14 @@ printlog("Reading image list...")
 imagelist <- list.files(pattern="*.jpg", path=IMAGE_DIR)
 imagenums <- sub(".*_", "", imagelist) %>% 
     sub(".jpg", "", .) %>%
-    sub("^0", "", .) %>%
+    sub("^0+", "", .) %>%
     toupper()
 
 printlog("Reading data list...")
 datalist <- list.files(pattern="*.pos", path=DATA_DIR)
 datanums <- sub(".*_", "", datalist) %>% 
     sub(".pos", "", .) %>%
-    sub("^0", "", .) %>%
+    sub("^0+", "", .) %>%
     toupper()
 
 printlog("Reading tree core list...")
@@ -55,6 +55,7 @@ printlog(length(intersect(imagenums, corenums)), "images with data")
 
 cwi <- setdiff(corenums, imagenums)
 printlog(length(cwi), "cores without images")
+if(length(cwi)) print(cwi)
 iwc <- setdiff(imagenums, corenums)
 printlog(length(iwc), "images without cores")
 if(length(iwc)) print(iwc)

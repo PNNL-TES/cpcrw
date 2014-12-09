@@ -1,0 +1,22 @@
+Tue Dec  9 08:17:23 2014  Welcome to 4-increment_models.R
+Tue Dec  9 08:17:23 2014  Opening ./outputs/ringwidths.csv
+Tue Dec  9 08:17:23 2014  Opening ./tree_cores.csv
+Tue Dec  9 08:17:23 2014  Merging...
+Tue Dec  9 08:17:23 2014  Saving outputs//4-ringcounts.pdf
+Tue Dec  9 08:17:24 2014  All done with 4-increment_models.R
+R version 3.1.2 (2014-10-31)
+Platform: x86_64-apple-darwin10.8.0 (64-bit)
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] plyr_1.8.1      magrittr_1.0.1  reshape2_1.4    ggplot2_0.9.3.1
+
+loaded via a namespace (and not attached):
+ [1] colorspace_1.2-4 digest_0.6.4     grid_3.1.2       gtable_0.1.2     labeling_0.2    
+ [6] MASS_7.3-35      munsell_0.4.2    proto_0.3-10     Rcpp_0.11.3      scales_0.2.4    
+[11] stringr_0.6.2    tools_3.1.2     
