@@ -28,8 +28,10 @@ sink(paste(LOG_DIR, paste0(SCRIPTNAME, ".txt"), sep="/"), split=T)
 
 printlog("Welcome to", SCRIPTNAME)
 
-loadlibs(c("ggplot2", "reshape2", "magrittr")) 
+library(ggplot2)
 theme_set(theme_bw())
+library(reshape2)
+library(magrittr)
 
 # Read in CooRecorder data files, compute ring increments, and write out a data frame
 printlog("Welcome to coodata.R")
@@ -114,7 +116,7 @@ printlog("Making diagnostic plots...")
 
 p1 <- qplot(Year, Width_mm, color=Core, data=ringwidths)
 print(p1)
-saveplot("3-read_coodata_qc1")
+saveplot("3-qc1")
 
 ringwidths$decade <- floor(ringwidths$Year / 10) * 10
 ringwidths$decade <- paste0(ringwidths$decade, "-", ringwidths$decade + 9)
@@ -126,7 +128,7 @@ p2 <- ggplot(ringwidths, aes(decade, Width_mm)) +
     geom_boxplot() + 
     geom_text(aes(label=label), size=3, vjust=-1)
 print(p2)
-saveplot("3-read_coodata_qc2")
+saveplot("3-qc2")
 
 for(d in unique(ringwidths$decade)) {
     r <- ringwidths[ringwidths$decade==d,]

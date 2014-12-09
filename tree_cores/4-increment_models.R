@@ -24,7 +24,7 @@ printlog("Welcome to", SCRIPTNAME)
 
 library(ggplot2)
 theme_set(theme_bw())
-library(plyr)
+library(dplyr)
 library(magrittr)
 
 ringwidths <- read_csv(RINGWIDTHDATA)
@@ -33,14 +33,14 @@ coredata <- read_csv(COREDATA)
 printlog("Merging...")
 d <- merge(coredata, ringwidths, by="Core")
 d <- d[d$Year>MINYEAR,]
-counts <- ddply(d, .(Transect, Position), summarise, ringcount=length(Year))
-counts$Transect <- factor(counts$Transect, levels=c("T5", "T6", "T7", "T8", "T9", "T10"))
 
+trees <- d %>% group_by(Transect, Position) %>% summarise(n=length(unique(Core)))
+trees$Transect <- factor(counts$Transect, levels=c("T5", "T6", "T7", "T8", "T9", "T10"))
 
-p1 <- qplot(Transect,Position,label=ringcount, geom="text", data=counts)
-p1 <- p1 + ggtitle(paste("Ring counts. Min year =", MINYEAR))
+p1 <- qplot(Transect, Position, label=n, geom="text", data=trees)
+p1 <- p1 + ggtitle("Number of trees processed")
 print(p1)
-saveplot("4-ringcounts")
+saveplot("4-treecounts")
 
 printlog("All done with", SCRIPTNAME)
 print(sessionInfo())
