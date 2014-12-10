@@ -9,10 +9,10 @@
 # Support functions and common definitions
 source("0-functions.R")
 
-SCRIPTNAME        <- "5-npp.R"
+SCRIPTNAME        <- "1-npp.R"
 
-INCREMENT_MODELS    <- "outputs/increment_models.csv"
-TREE_SURVEY         <- "../tree_survey/tree_survey.csv"
+INCREMENT_MODELS    <- "../tree_cores/outputs/increment_models.csv"
+TREE_SURVEY         <- "tree_survey.csv"
 
 # ==============================================================================
 # Main
