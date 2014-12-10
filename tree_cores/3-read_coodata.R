@@ -2,7 +2,7 @@
 # Ben Bond-Lamberty December 2014
 
 # Support functions and common definitions
-source("0-functions.R")
+source("../0-functions.R")
 
 DATA_DIR        <- "core_data/"
 

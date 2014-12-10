@@ -7,7 +7,7 @@
 # Ben Bond-Lamberty December 2014
 
 # Support functions and common definitions
-source("0-functions.R")
+source("../0-functions.R")
 
 SCRIPTNAME        <- "4-increment_models.R"
 
