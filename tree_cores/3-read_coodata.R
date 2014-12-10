@@ -104,7 +104,7 @@ names(ringwidths)[2] <- "Core"
 names(ringwidths)[3] <- "Width_mm"
 ringwidths$Core <- ringwidths$Core %>%
     sub("cpcrw_", "", .) %>%
-    sub("^0", "", .)
+    sub("^0*", "", .)  # remove leading zeros (zeroes?) from core number
 
 
 

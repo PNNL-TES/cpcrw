@@ -1,22 +1,22 @@
-Wed Dec 10 08:45:24 2014  Welcome to 2-file_qc.R
-Wed Dec 10 08:45:27 2014  Reading image list...
-Wed Dec 10 08:45:27 2014  Reading data list...
-Wed Dec 10 08:45:27 2014  Reading tree core list...
-Wed Dec 10 08:45:27 2014  276 cores listed in tree_cores.csv
-Wed Dec 10 08:45:27 2014  269 image files found in core_images/
-Wed Dec 10 08:45:27 2014  173 data files found in core_data/
-Wed Dec 10 08:45:27 2014  269 cores with images
-Wed Dec 10 08:45:27 2014  173 cores with data
-Wed Dec 10 08:45:27 2014  269 images with data
-Wed Dec 10 08:45:27 2014  7 cores without images
+Wed Dec 10 12:15:48 2014  Welcome to 2-file_qc.R
+Wed Dec 10 12:15:54 2014  Reading image list...
+Wed Dec 10 12:15:54 2014  Reading data list...
+Wed Dec 10 12:15:54 2014  Reading tree core list...
+Wed Dec 10 12:15:54 2014  276 cores listed in tree_cores.csv
+Wed Dec 10 12:15:54 2014  269 image files found in core_images/
+Wed Dec 10 12:15:54 2014  173 data files found in core_data/
+Wed Dec 10 12:15:54 2014  269 cores with images
+Wed Dec 10 12:15:54 2014  173 cores with data
+Wed Dec 10 12:15:54 2014  269 images with data
+Wed Dec 10 12:15:54 2014  7 cores without images
 [1] "193" "197" "239" "244" "254" "260" "267"
-Wed Dec 10 08:45:27 2014  0 images without cores
-Wed Dec 10 08:45:27 2014  0 data without images
-Wed Dec 10 08:45:27 2014  0 data without cores
-Wed Dec 10 08:45:27 2014  No duplicate core numbers
-Wed Dec 10 08:45:27 2014  No duplicate image numbers
-Wed Dec 10 08:45:27 2014  No duplicate data numbers
-Wed Dec 10 08:45:27 2014  All done with 2-file_qc.R
+Wed Dec 10 12:15:54 2014  0 images without cores
+Wed Dec 10 12:15:54 2014  0 data without images
+Wed Dec 10 12:15:54 2014  0 data without cores
+Wed Dec 10 12:15:54 2014  No duplicate core numbers
+Wed Dec 10 12:15:54 2014  No duplicate image numbers
+Wed Dec 10 12:15:54 2014  No duplicate data numbers
+Wed Dec 10 12:15:54 2014  All done with 2-file_qc.R
 R version 3.1.2 (2014-10-31)
 Platform: x86_64-apple-darwin10.8.0 (64-bit)
 
