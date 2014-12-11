@@ -1,5 +1,5 @@
-# Support functions
-# Ben Bond-Lamberty December 2013
+# Support functions used by all functions in sub-folders
+# Ben Bond-Lamberty December 2014
 
 OUTPUT_DIR		<- "outputs/"
 LOG_DIR			<- "logs/"
@@ -30,18 +30,25 @@ object.sizes <- function() {
 
 # -----------------------------------------------------------------------------
 # Save a ggplot figure
-saveplot <- function(pname, p=last_plot(), ptype=".pdf") {
-	stopifnot(file.exists(OUTPUT_DIR))
-	fn <- paste0(OUTPUT_DIR, "/", pname, ptype)
+saveplot <- function(pname, p=last_plot(), ptype=".pdf", scriptfolder=TRUE) {
+	output_dir <- OUTPUT_DIR
+	if(scriptfolder) output_dir <- paste(output_dir, SCRIPT_NAME, sep="/")
+	if( !file.exists(output_dir)) dir.create(output_dir)
+
+	fn <- paste0(output_dir, "/", pname, ptype)
 	printlog("Saving", fn)
 	ggsave(fn, p)
 } # saveplot
 
 # -----------------------------------------------------------------------------
 # Save a data frame
-savedata <- function(df, extension=".csv") {
-	stopifnot(file.exists(OUTPUT_DIR))
-	fn <- paste0(OUTPUT_DIR, "/", deparse(substitute(df)), extension)
+savedata <- function(df, extension=".csv", scriptfolder=TRUE) {
+	output_dir <- OUTPUT_DIR
+	if(scriptfolder) output_dir <- paste(output_dir, SCRIPT_NAME, sep="/")
+	if( !file.exists(output_dir)) dir.create(output_dir)
+
+	stopifnot(file.exists(output_dir))
+	fn <- paste0(output_dir, "/", deparse(substitute(df)), extension)
 	printlog("Saving", fn)
 	write.csv(df, fn, row.names=F)
 } # saveplot
@@ -83,12 +90,12 @@ is.outlier <- function(x, devs=3.2) {
 
 
 
-if( !file.exists( OUTPUT_DIR ) ) {
-    printlog( "Creating", OUTPUT_DIR )
-    dir.create( OUTPUT_DIR )
+if( !file.exists(OUTPUT_DIR)) {
+    printlog("Creating", OUTPUT_DIR)
+    dir.create(OUTPUT_DIR)
 }
-if( !file.exists( LOG_DIR ) ) {
-    printlog( "Creating", LOG_DIR )
-    dir.create( LOG_DIR )
+if( !file.exists( LOG_DIR)) {
+    printlog("Creating", LOG_DIR)
+    dir.create(LOG_DIR)
 }
 
