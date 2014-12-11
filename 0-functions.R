@@ -30,10 +30,10 @@ object.sizes <- function() {
 
 # -----------------------------------------------------------------------------
 # Save a ggplot figure
-saveplot <- function(pname, p=last_plot(), ptype=".pdf", scriptfolder=TRUE) {
+saveplot <- function(pname, p=last_plot(), ptype=".pdf", scriptfolder=FALSE) {
 	output_dir <- OUTPUT_DIR
 	if(scriptfolder) output_dir <- paste(output_dir, SCRIPT_NAME, sep="/")
-	if( !file.exists(output_dir)) dir.create(output_dir)
+	if(!file.exists(output_dir)) dir.create(output_dir)
 
 	fn <- paste0(output_dir, "/", pname, ptype)
 	printlog("Saving", fn)
@@ -42,10 +42,10 @@ saveplot <- function(pname, p=last_plot(), ptype=".pdf", scriptfolder=TRUE) {
 
 # -----------------------------------------------------------------------------
 # Save a data frame
-savedata <- function(df, extension=".csv", scriptfolder=TRUE) {
+savedata <- function(df, extension=".csv", scriptfolder=FALSE) {
 	output_dir <- OUTPUT_DIR
 	if(scriptfolder) output_dir <- paste(output_dir, SCRIPT_NAME, sep="/")
-	if( !file.exists(output_dir)) dir.create(output_dir)
+	if(!file.exists(output_dir)) dir.create(output_dir)
 
 	stopifnot(file.exists(output_dir))
 	fn <- paste0(output_dir, "/", deparse(substitute(df)), extension)
