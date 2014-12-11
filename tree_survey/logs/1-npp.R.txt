@@ -1,0 +1,42 @@
+Wed Dec 10 21:29:27 2014  Welcome to 1-npp.R
+Wed Dec 10 21:30:04 2014  Opening ./../tree_cores/outputs/increment_models.csv
+Wed Dec 10 21:30:04 2014  Opening ./tree_survey.csv
+Wed Dec 10 21:30:04 2014  tree_survey rows = 955 cols = 7
+Wed Dec 10 21:30:04 2014  Eliminating dead trees...
+Wed Dec 10 21:30:04 2014  tree_survey rows = 921 cols = 6
+Wed Dec 10 21:30:04 2014  Merging tree survey data with increment models from coring...
+Wed Dec 10 21:30:04 2014  Computing increments...
+Wed Dec 10 21:30:04 2014  Computing biomass...
+Wed Dec 10 21:30:04 2014  Computing NPP...
+ Transect   Position_m       npp_gC      
+ T5 :8    Min.   : 0.0   Min.   : 22.54  
+ T6 :8    1st Qu.:17.5   1st Qu.: 35.81  
+ T7 :8    Median :35.0   Median : 78.34  
+ T8 :8    Mean   :35.0   Mean   :151.86  
+ T9 :8    3rd Qu.:52.5   3rd Qu.:249.38  
+ T10:8    Max.   :70.0   Max.   :558.71  
+Wed Dec 10 21:30:07 2014  Saving outputs//npp.csv
+Wed Dec 10 21:30:08 2014  Plotting...
+Wed Dec 10 21:30:16 2014  Saving outputs//1-npp1.pdf
+Wed Dec 10 21:30:18 2014  Saving outputs//1-npp2.pdf
+Wed Dec 10 21:30:20 2014  Doing species-specific plots...
+Wed Dec 10 21:30:20 2014  Saving outputs//1-npp3.pdf
+Wed Dec 10 21:30:21 2014  All done with 1-npp.R
+R version 3.1.2 (2014-10-31)
+Platform: x86_64-apple-darwin10.8.0 (64-bit)
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] magrittr_1.0.1   dplyr_0.3.0.9000 ggplot2_0.9.3.1 
+
+loaded via a namespace (and not attached):
+ [1] assertthat_0.1.0.99 colorspace_1.2-4    DBI_0.3.1           digest_0.6.4       
+ [5] grid_3.1.2          gtable_0.1.2        labeling_0.2        lazyeval_0.1.9.9001
+ [9] MASS_7.3-35         munsell_0.4.2       parallel_3.1.2      plyr_1.8.1         
+[13] proto_0.3-10        Rcpp_0.11.3         reshape2_1.4        scales_0.2.4       
+[17] stringr_0.6.2       tools_3.1.2        

@@ -1,11 +1,11 @@
-Wed Dec 10 21:06:11 2014  Welcome to 4-increment_models.R
-Wed Dec 10 21:06:39 2014  Opening ./outputs/ringwidths.csv
-Wed Dec 10 21:06:40 2014  Opening ./tree_cores.csv
-Wed Dec 10 21:06:40 2014  Merging...
-Wed Dec 10 21:06:40 2014  Excluding data before 2008
-Wed Dec 10 21:06:53 2014  Saving outputs//4-treecounts.pdf
-Wed Dec 10 21:07:08 2014  Saving outputs//increment_models.csv
-Wed Dec 10 21:07:09 2014  All done with 4-increment_models.R
+Wed Dec 10 21:30:34 2014  Welcome to 2-explore_npp.R
+Wed Dec 10 21:30:34 2014  Opening ./outputs//npp.csv
+Wed Dec 10 21:30:34 2014  Opening ./../ald/cpcrw_ald.csv
+Wed Dec 10 21:30:34 2014  Plotting ALD...
+Wed Dec 10 21:30:35 2014  Saving outputs//2-ald.pdf
+Wed Dec 10 21:30:36 2014  Merging ALD and NPP data...
+Wed Dec 10 21:30:38 2014  Saving outputs//2-ald_vs_npp.pdf
+Wed Dec 10 21:30:38 2014  All done with 2-explore_npp.R
 R version 3.1.2 (2014-10-31)
 Platform: x86_64-apple-darwin10.8.0 (64-bit)
 
@@ -22,5 +22,5 @@ loaded via a namespace (and not attached):
  [1] assertthat_0.1.0.99 colorspace_1.2-4    DBI_0.3.1           digest_0.6.4       
  [5] grid_3.1.2          gtable_0.1.2        labeling_0.2        lazyeval_0.1.9.9001
  [9] MASS_7.3-35         munsell_0.4.2       parallel_3.1.2      plyr_1.8.1         
-[13] proto_0.3-10        R6_2.0              Rcpp_0.11.3         reshape2_1.4       
-[17] scales_0.2.4        stringr_0.6.2       tools_3.1.2        
+[13] proto_0.3-10        Rcpp_0.11.3         reshape2_1.4        scales_0.2.4       
+[17] stringr_0.6.2       tools_3.1.2        
