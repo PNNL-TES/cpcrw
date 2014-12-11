@@ -1,5 +1,6 @@
 # Support functions used by all functions in sub-folders
 # Ben Bond-Lamberty December 2014
+# TODO: very inconsistent function naming scheme
 
 OUTPUT_DIR		<- "outputs/"
 LOG_DIR			<- "logs/"
@@ -24,8 +25,8 @@ printdims <- function(d, dname=deparse(substitute(d))) {
 # -----------------------------------------------------------------------------
 # Return matrix of memory consumption
 object.sizes <- function() {
-    return(rev(sort(sapply(ls(envir=.GlobalEnv), function(object.name) 
-        object.size(get(object.name))))))
+    rev(sort(sapply(ls(envir=.GlobalEnv), function(object.name) 
+        object.size(get(object.name)))))
 }
 
 # -----------------------------------------------------------------------------
