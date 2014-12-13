@@ -1,3 +1,4 @@
+Fri Dec 12 23:07:46 2014  Welcome to 1-coring_check.R
 Fri Dec 12 23:08:20 2014  Welcome to 1-npp.R
 Fri Dec 12 23:08:20 2014  Opening ./../tree_cores/outputs/increment_models.csv
 Fri Dec 12 23:08:20 2014  Opening ./tree_survey.csv
@@ -22,6 +23,32 @@ Fri Dec 12 23:08:23 2014  Saving outputs//1-npp2.pdf
 Fri Dec 12 23:08:23 2014  Doing species-specific plots...
 Fri Dec 12 23:08:24 2014  Saving outputs//1-npp3.pdf
 Fri Dec 12 23:08:24 2014  All done with 1-npp.R
+R version 3.1.2 (2014-10-31)
+Platform: x86_64-apple-darwin10.8.0 (64-bit)
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] dplyr_0.3.0.9000 reshape2_1.4     magrittr_1.0.1   ggplot2_0.9.3.1 
+
+loaded via a namespace (and not attached):
+ [1] assertthat_0.1.0.99 colorspace_1.2-4    DBI_0.3.1           digest_0.6.4       
+ [5] grid_3.1.2          gtable_0.1.2        labeling_0.2        lazyeval_0.1.9.9001
+ [9] MASS_7.3-35         munsell_0.4.2       parallel_3.1.2      plyr_1.8.1         
+[13] proto_0.3-10        R6_2.0              Rcpp_0.11.3         scales_0.2.4       
+[17] stringr_0.6.2       tools_3.1.2        
+Fri Dec 12 23:08:37 2014  Welcome to 2-explore_npp.R
+Fri Dec 12 23:08:37 2014  Opening ./outputs//npp.csv
+Fri Dec 12 23:08:37 2014  Opening ./../ald/cpcrw_ald.csv
+Fri Dec 12 23:08:38 2014  Plotting ALD...
+Fri Dec 12 23:08:39 2014  Saving outputs//2-ald.pdf
+Fri Dec 12 23:08:39 2014  Merging ALD and NPP data...
+Fri Dec 12 23:08:41 2014  Saving outputs//2-ald_vs_npp.pdf
+Fri Dec 12 23:08:41 2014  All done with 2-explore_npp.R
 R version 3.1.2 (2014-10-31)
 Platform: x86_64-apple-darwin10.8.0 (64-bit)
 
