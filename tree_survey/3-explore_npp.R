@@ -9,7 +9,7 @@
 # Support functions and common definitions
 source("../0-functions.R")
 
-SCRIPTNAME        <- "2-explore_npp.R"
+SCRIPTNAME        <- "3-explore_npp.R"
 
 NPP_DATA            <- paste(OUTPUT_DIR, "npp.csv", sep="/")
 ALD_DATA            <- "../ald/cpcrw_ald.csv"
@@ -49,6 +49,15 @@ p2 <- ggplot(d, aes(Depth_cm, npp_gC)) + geom_point() + geom_smooth(method='lm')
 p2 <- p2 + xlab("ALD (cm)") + ylab("NPP (gC/m2/yr")
 print(p2)
 saveplot("2-ald_vs_npp")
+
+printlog("Model for ALD versus NPP...")
+m1 <- lm(npp_gC ~ Depth_cm, data=d)
+print(summary(m1))
+pdf(paste(outputdir(), "m1-ald_vs_npp.pdf", sep="/"))
+par(mfrow=c(2,2))
+plot(m1)
+dev.off()
+
 
 printlog("All done with", SCRIPTNAME)
 print(sessionInfo())

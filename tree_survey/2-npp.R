@@ -9,7 +9,7 @@
 # Support functions and common definitions
 source("../0-functions.R")
 
-SCRIPTNAME        <- "1-npp.R"
+SCRIPTNAME        <- "2-npp.R"
 
 INCREMENT_MODELS    <- "../tree_cores/outputs/increment_models.csv"
 TREE_SURVEY         <- "tree_survey.csv"
@@ -65,19 +65,19 @@ npp$npp_gC <- npp$npp_gC / plotsize
 npp$npp_gC <- npp$npp_gC / 2.0  # to g C
 
 print(summary(npp))
-savedata(npp)
+savedata(npp, scriptfolder=FALSE)
 
 printlog("Plotting...")
 
 p1 <- ggplot(npp, aes(Transect, Position_m)) + geom_tile(aes(fill=npp_gC))
 p1 <- p1 + ylab("Transect Position_m (m)") + xlab("Transect")
 print(p1)
-saveplot("1-npp1")
+saveplot("npp1")
 
 p2 <- ggplot(npp, aes(factor(Position_m), npp_gC)) + geom_boxplot()
 p2 <- p2 + xlab("Transect Position_m (m)") + ylab("NPP (gC/m2/yr)")
 print(p2)
-saveplot("1-npp2")
+saveplot("npp2")
 
 
 # Species-specific
@@ -98,7 +98,7 @@ npp_species <- npp_species %>%
 p3 <- ggplot(npp_species, aes(factor(Position_m), npp_gC, fill=Species, group=Species)) + geom_bar(stat='identity')
 p3 <- p3 + xlab("Transect Position_m (m)") + ylab("NPP (gC/m2/yr)")
 print(p3)
-saveplot("1-npp3")
+saveplot("npp3")
 
 
 printlog("All done with", SCRIPTNAME)

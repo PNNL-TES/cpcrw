@@ -8,6 +8,10 @@ DATA_DIR        <- "core_data/"
 
 SCRIPTNAME    	<- "3-read_coodata.R"
 
+GOODSCANS       <- paste0(DATA_DIR, "scans_good.txt")
+BADSCANS       <- paste0(DATA_DIR, "scans_bad.txt")
+
+
 # -----------------------------------------------------------------------------
 # Scan a read-in *.pos file and extract date (if supplied)
 determine_lastyear <- function(d)
@@ -106,11 +110,19 @@ ringwidths$Core <- ringwidths$Core %>%
     sub("cpcrw_", "", .) %>%
     sub("^0*", "", .)  # remove leading zeros (zeroes?) from core number
 
-
-
 printdims(ringwidths)
+savedata(ringwidths, scriptfolder=FALSE)
 
-savedata(ringwidths)
+printlog("Reading info on good- and bad-quality scans...")
+printlog(GOODSCANS)
+goods <- read.table(GOODSCANS, col.names="Core", stringsAsFactors=F)
+goods$ScanQuality <- "Good"
+printlog(BADSCANS)
+bads <- read.table(BADSCANS, col.names="Core", stringsAsFactors=F)
+bads$ScanQuality <- "Bad"
+goodbads <- rbind(goods, bads)
+goodbads$Core <- goodbads$Core %>% sub("^0*", "", .)
+ringwidths <- merge(ringwidths, goodbads, all=T)
 
 printlog("Making diagnostic plots...")
 
@@ -136,6 +148,12 @@ for(d in unique(ringwidths$decade)) {
     printlog(nrow(outliers), "outliers in decade", d, "(out of", nrow(r), "rings)")
     if(nrow(outliers)) print(outliers)
 }
+
+p3 <- ggplot(ringwidths[!is.na(ringwidths$ScanQuality),], aes(Year, Width_mm, color=ScanQuality, group=Core)) + 
+    geom_line()
+print(p3)
+saveplot("3-qc3")
+
 
 printlog("All done with", SCRIPTNAME)
 print(sessionInfo())

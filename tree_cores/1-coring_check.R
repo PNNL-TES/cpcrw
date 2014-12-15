@@ -13,8 +13,11 @@ sink( paste( LOG_DIR, paste0( SCRIPTNAME, ".txt" ), sep="/" ), split=T )
 
 printlog( "Welcome to", SCRIPTNAME )
 
-loadlibs( c( "ggplot2", "reshape", "plyr", "lubridate" ) )	# the hadleyverse
+library(ggplot2)
 theme_set( theme_bw() )
+library(reshape)
+library(plyr)
+library(lubridate)
 
 # ----- Main script goes here...
 
