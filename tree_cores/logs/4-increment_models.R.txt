@@ -1,0 +1,39 @@
+Sun Dec 14 19:26:41 2014  Welcome to 4-increment_models.R
+Sun Dec 14 19:26:42 2014  Opening ./outputs/ringwidths.csv
+Sun Dec 14 19:26:42 2014  Opening ./tree_cores.csv
+Sun Dec 14 19:26:42 2014  Unique cores in ring width data = 210
+Sun Dec 14 19:26:42 2014  Unique cores in coring data = 276
+Sun Dec 14 19:26:42 2014  Cores in ring width data but not in coring data:
+character(0)
+Sun Dec 14 19:26:42 2014  Cores in coring data but not in ring width data:
+ [1] "bc107" "bc163" "181"   "182"   "183"   "184"   "185"   "189"   "190"   "193"  
+[11] "194"   "195"   "196"   "197"   "201"   "202"   "203"   "204"   "205"   "206"  
+[21] "207"   "208"   "209"   "210"   "211"   "214"   "215"   "216"   "217"   "bc210"
+[31] "218"   "220"   "221"   "222"   "223"   "224"   "225"   "226"   "227"   "230"  
+[41] "231"   "232"   "235"   "236"   "237"   "238"   "239"   "241"   "242"   "243"  
+[51] "244"   "251"   "252"   "253"   "254"   "256"   "257"   "258"   "259"   "260"  
+[61] "262"   "263"   "264"   "265"   "267"   "268"  
+Sun Dec 14 19:26:42 2014  Merging...
+Sun Dec 14 19:26:42 2014  Diagnostic plot...
+Sun Dec 14 19:26:43 2014  Saving outputs//4-increment_models/4-treecounts.pdf
+Sun Dec 14 19:26:43 2014  Excluding data before 2008
+Sun Dec 14 19:26:43 2014  Saving outputs//increment_models.csv
+Sun Dec 14 19:26:43 2014  All done with 4-increment_models.R
+R version 3.1.2 (2014-10-31)
+Platform: x86_64-apple-darwin10.8.0 (64-bit)
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] magrittr_1.0.1   dplyr_0.3.0.9000 ggplot2_0.9.3.1 
+
+loaded via a namespace (and not attached):
+ [1] assertthat_0.1.0.99 colorspace_1.2-4    DBI_0.3.1           digest_0.6.4       
+ [5] grid_3.1.2          gtable_0.1.2        labeling_0.2        lazyeval_0.1.9.9001
+ [9] MASS_7.3-35         munsell_0.4.2       parallel_3.1.2      plyr_1.8.1         
+[13] proto_0.3-10        R6_2.0              Rcpp_0.11.3         reshape2_1.4       
+[17] scales_0.2.4        stringr_0.6.2       tools_3.1.2        
