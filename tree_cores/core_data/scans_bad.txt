@@ -1,4 +1,4 @@
-# Particularly bad-quality scans
+# Core numbers with particularly bad-quality scans
 96
 106
 132
@@ -9,3 +9,13 @@
 275
 282
 289
+67
+86
+89
+93
+102
+004
+17
+172
+173
+174

@@ -1,4 +1,4 @@
-# Particularly good-quality scans
+# Core numbers with particularly good-quality scans
 117
 137
 139
@@ -8,3 +8,21 @@
 301
 BC274
 BC302
+72
+74
+75
+83
+87
+88
+112
+113
+008
+031
+49
+163
+165
+166
+169
+60
+63
+66

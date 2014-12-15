@@ -1,5 +1,0 @@
-# Scans with line breaks (because of ring problem) - check
-274
-301
-BC274
-BC302
