@@ -30,26 +30,29 @@ object.sizes <- function() {
 }
 
 # -----------------------------------------------------------------------------
-# Save a ggplot figure
-saveplot <- function(pname, p=last_plot(), ptype=".pdf", scriptfolder=FALSE) {
-	output_dir <- OUTPUT_DIR
-	if(scriptfolder) output_dir <- paste(output_dir, SCRIPT_NAME, sep="/")
-	if(!file.exists(output_dir)) dir.create(output_dir)
+# Return output directory (perhaps inside a script-specific folder)
+# If caller species `scriptfolder=FALSE`, return OUTPUT_DIR
+# If caller species `scriptfolder=TRUE` (default), return OUTPUT_DIR/SCRIPTNAME
+outputdir <- function(scriptfolder=TRUE) {
+    output_dir <- OUTPUT_DIR
+    if(scriptfolder) output_dir <- paste(output_dir, 
+                                         sub(".R$", "", SCRIPTNAME), sep="/")
+    if(!file.exists(output_dir)) dir.create(output_dir)
+    output_dir
+}
 
-	fn <- paste0(output_dir, "/", pname, ptype)
+# -----------------------------------------------------------------------------
+# Save a ggplot figure
+saveplot <- function(pname, p=last_plot(), ptype=".pdf", scriptfolder=TRUE) {
+	fn <- paste0(outputdir(scriptfolder), "/", pname, ptype)
 	printlog("Saving", fn)
 	ggsave(fn, p)
 } # saveplot
 
 # -----------------------------------------------------------------------------
 # Save a data frame
-savedata <- function(df, extension=".csv", scriptfolder=FALSE) {
-	output_dir <- OUTPUT_DIR
-	if(scriptfolder) output_dir <- paste(output_dir, SCRIPT_NAME, sep="/")
-	if(!file.exists(output_dir)) dir.create(output_dir)
-
-	stopifnot(file.exists(output_dir))
-	fn <- paste0(output_dir, "/", deparse(substitute(df)), extension)
+savedata <- function(df, extension=".csv", scriptfolder=TRUE) {
+    fn <- paste0(outputdir(scriptfolder), "/", deparse(substitute(df)), extension)
 	printlog("Saving", fn)
 	write.csv(df, fn, row.names=F)
 } # saveplot
