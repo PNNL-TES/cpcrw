@@ -15,3 +15,5 @@
 *.tiff
 
 .Rproj.user
+
+*.html
