@@ -1,859 +1,1092 @@
-Sun Dec 14 19:27:08 2014  Welcome to 3-read_coodata.R
-Sun Dec 14 19:27:08 2014  Welcome to coodata.R
-Sun Dec 14 19:27:08 2014  We know how to process CooRecorder data files!
-Sun Dec 14 19:27:08 2014  Looking in core_data/
-Sun Dec 14 19:27:08 2014  Scanning for last year data; default = 2013
-Sun Dec 14 19:27:08 2014  cpcrw_001.pos NA 62
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_002.pos NA 33
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_003.pos NA 75
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_004.pos NA 16
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_005.pos NA 53
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_006.pos NA 53
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_007.pos NA 69
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_008.pos NA 53
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_009.pos NA 66
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_010.pos NA 79
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_011.pos NA 27
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_012.pos NA 77
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_013.pos NA 79
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_014.pos NA 74
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_015.pos NA 85
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_016.pos NA 63
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_017.pos NA 30
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_018.pos NA 31
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_019.pos NA 41
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_020.pos NA 73
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_021.pos NA 25
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_022.pos NA 18
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_023.pos NA 22
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_024.pos NA 82
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_025.pos NA 53
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_026.pos NA 68
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_027.pos NA 10
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_028.pos NA 80
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_029.pos NA 24
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_030.pos NA 62
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_031.pos NA 71
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_032.pos NA 48
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_033.pos NA 32
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_034.pos NA 17
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_035.pos NA 40
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_036.pos NA 24
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_037.pos NA 30
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_038.pos NA 55
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_039.pos NA 81
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_040.pos NA 23
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_041.pos NA 14
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_042.pos NA 43
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_043.pos NA 48
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_044.pos NA 43
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_045.pos NA 40
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_046.pos NA 47
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_047.pos NA 44
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_048.pos NA 27
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_049.pos NA 26
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_050.pos NA 39
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_051.pos NA 57
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_052.pos NA 64
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_053.pos NA 25
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_054.pos NA 72
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_055.pos NA 23
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_056.pos NA 55
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_057.pos NA 77
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_058.pos NA 26
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_059.pos NA 27
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_060.pos NA 81
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_061.pos NA 54
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_062.pos NA 35
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_063.pos NA 83
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_064.pos NA 32
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_065.pos NA 32
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_066.pos NA 79
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_067.pos NA 49
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_068.pos NA 74
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_069.pos NA 35
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_070.pos NA 19
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_071.pos NA 82
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_072.pos NA 79
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_073.pos NA 76
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_074.pos NA 78
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_075.pos NA 85
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_076.pos NA 35
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_077.pos NA 55
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_078.pos NA 74
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_079.pos NA 48
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_080.pos NA 61
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_081.pos NA 43
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_082.pos NA 52
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_083.pos NA 87
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_084.pos NA 47
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_085.pos NA 59
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_086.pos NA 31
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_087.pos NA 59
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_088.pos NA 39
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_089.pos NA 38
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_090.pos NA 52
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_091.pos NA 49
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_092.pos NA 36
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_093.pos NA 40
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_094.pos NA 33
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_095.pos NA 32
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_096.pos NA 13
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_097.pos NA 30
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_101.pos NA 54
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_102.pos NA 32
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_103.pos NA 43
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_104.pos NA 43
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_105.pos NA 36
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_106.pos NA 22
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_107.pos NA 21
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_108.pos NA 25
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_109.pos NA 59
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_110.pos NA 35
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_111.pos NA 33
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_112.pos NA 53
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_113.pos NA 56
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_114.pos NA 78
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_115.pos NA 80
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_116.pos NA 28
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_117.pos NA 25
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_118.pos NA 77
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_119.pos NA 76
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_120.pos NA 58
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_121.pos NA 31
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_122.pos NA 35
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_123.pos NA 51
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_124.pos NA 66
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_125.pos NA 31
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_126.pos NA 32
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_127.pos NA 32
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_128.pos NA 38
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_129.pos NA 60
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_130.pos NA 60
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_131.pos NA 73
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_132.pos NA 29
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_133.pos NA 22
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_134.pos NA 79
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_135.pos NA 70
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_136.pos NA 15
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_137.pos NA 40
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_138.pos NA 32
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_139.pos NA 21
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_151.pos NA 41
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_152.pos NA 22
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_153.pos NA 61
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_154.pos NA 39
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_155.pos NA 35
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_156.pos NA 15
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_157.pos NA 29
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_158.pos NA 29
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_159.pos NA 38
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_160.pos NA 35
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_161.pos NA 73
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_162.pos NA 52
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_163.pos NA 39
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_164.pos NA 20
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_165.pos NA 25
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_166.pos NA 39
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_167.pos NA 34
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_168.pos NA 30
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_169.pos NA 40
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_170.pos NA 38
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_171.pos NA 42
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_172.pos NA 29
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_173.pos NA 32
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_174.pos NA 23
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_175.pos NA 56
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_176.pos NA 66
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_177.pos NA 22
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_178.pos NA 18
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_179.pos NA 29
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_180.pos NA 16
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_186.pos NA 34
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_187.pos NA 26
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_188.pos NA 43
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_191.pos NA 21
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_192.pos NA 20
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_198.pos NA 40
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_212.pos NA 16
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_213.pos NA 10
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_219.pos NA 10
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_228.pos NA 32
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_229.pos NA 27
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_233.pos NA 15
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_234.pos NA 20
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_240.pos NA 19
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_255.pos NA 12
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_261.pos NA 39
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_266.pos NA 26
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_269.pos NA 59
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_270.pos NA 70
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_271.pos NA 50
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_272.pos NA 26
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_273.pos NA 53
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_274.pos NA 33
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_275.pos NA 12
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_276.pos NA 23
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_277.pos NA 39
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_278.pos NA 9
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_279.pos NA 11
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_280.pos NA 32
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_281.pos NA 27
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_282.pos NA 16
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_283.pos NA 51
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_285.pos NA 16
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_286.pos NA 38
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_287.pos NA 22
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_288.pos NA 24
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_289.pos NA 16
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_290.pos NA 23
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_291.pos NA 10
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_292.pos NA 27
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_301.pos NA 64
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_bc284.pos NA 84
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_bc302.pos NA 85
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  cpcrw_bc303.pos NA 85
-Sun Dec 14 19:27:08 2014  *** No year found! Assigning default value ***
-Sun Dec 14 19:27:08 2014  Now building your custom-designed data frame...
-Sun Dec 14 19:27:08 2014  cpcrw_001.pos
-Sun Dec 14 19:27:09 2014  	Gap: 7
-Sun Dec 14 19:27:09 2014  	Gap: 36
-Sun Dec 14 19:27:09 2014  cpcrw_002.pos
-Sun Dec 14 19:27:09 2014  	Gap: 10
-Sun Dec 14 19:27:09 2014  cpcrw_003.pos
-Sun Dec 14 19:27:09 2014  	Gap: 6
-Sun Dec 14 19:27:09 2014  	Gap: 17
-Sun Dec 14 19:27:09 2014  	Gap: 24
-Sun Dec 14 19:27:09 2014  cpcrw_004.pos
-Sun Dec 14 19:27:09 2014  cpcrw_005.pos
-Sun Dec 14 19:27:09 2014  cpcrw_006.pos
-Sun Dec 14 19:27:09 2014  cpcrw_007.pos
-Sun Dec 14 19:27:09 2014  	Gap: 32
-Sun Dec 14 19:27:09 2014  cpcrw_008.pos
-Sun Dec 14 19:27:09 2014  	Gap: 10
-Sun Dec 14 19:27:09 2014  	Gap: 15
-Sun Dec 14 19:27:09 2014  cpcrw_009.pos
-Sun Dec 14 19:27:09 2014  	Gap: 58
-Sun Dec 14 19:27:09 2014  cpcrw_010.pos
-Sun Dec 14 19:27:09 2014  	Gap: 66
-Sun Dec 14 19:27:09 2014  cpcrw_011.pos
-Sun Dec 14 19:27:09 2014  cpcrw_012.pos
-Sun Dec 14 19:27:09 2014  cpcrw_013.pos
-Sun Dec 14 19:27:09 2014  	Gap: 22
-Sun Dec 14 19:27:09 2014  cpcrw_014.pos
-Sun Dec 14 19:27:09 2014  	Gap: 23
-Sun Dec 14 19:27:09 2014  cpcrw_015.pos
-Sun Dec 14 19:27:09 2014  	Gap: 19
-Sun Dec 14 19:27:09 2014  	Gap: 51
-Sun Dec 14 19:27:09 2014  cpcrw_016.pos
-Sun Dec 14 19:27:09 2014  	Gap: 20
-Sun Dec 14 19:27:09 2014  	Gap: 37
-Sun Dec 14 19:27:09 2014  	Gap: 51
-Sun Dec 14 19:27:09 2014  cpcrw_017.pos
-Sun Dec 14 19:27:09 2014  cpcrw_018.pos
-Sun Dec 14 19:27:09 2014  cpcrw_019.pos
-Sun Dec 14 19:27:09 2014  	Gap: 8
-Sun Dec 14 19:27:09 2014  	Gap: 10
-Sun Dec 14 19:27:09 2014  	Gap: 15
-Sun Dec 14 19:27:09 2014  	Gap: 26
-Sun Dec 14 19:27:09 2014  cpcrw_020.pos
-Sun Dec 14 19:27:09 2014  	Gap: 58
-Sun Dec 14 19:27:09 2014  cpcrw_021.pos
-Sun Dec 14 19:27:09 2014  cpcrw_022.pos
-Sun Dec 14 19:27:09 2014  cpcrw_023.pos
-Sun Dec 14 19:27:09 2014  cpcrw_024.pos
-Sun Dec 14 19:27:09 2014  	Gap: 15
-Sun Dec 14 19:27:09 2014  cpcrw_025.pos
-Sun Dec 14 19:27:09 2014  	Gap: 14
-Sun Dec 14 19:27:09 2014  	Gap: 24
-Sun Dec 14 19:27:09 2014  	Gap: 44
-Sun Dec 14 19:27:09 2014  cpcrw_026.pos
-Sun Dec 14 19:27:09 2014  	Gap: 9
-Sun Dec 14 19:27:09 2014  	Gap: 51
-Sun Dec 14 19:27:09 2014  cpcrw_027.pos
-Sun Dec 14 19:27:09 2014  cpcrw_028.pos
-Sun Dec 14 19:27:09 2014  	Gap: 8
-Sun Dec 14 19:27:09 2014  cpcrw_029.pos
-Sun Dec 14 19:27:09 2014  cpcrw_030.pos
-Sun Dec 14 19:27:09 2014  cpcrw_031.pos
-Sun Dec 14 19:27:09 2014  cpcrw_032.pos
-Sun Dec 14 19:27:09 2014  cpcrw_033.pos
-Sun Dec 14 19:27:09 2014  cpcrw_034.pos
-Sun Dec 14 19:27:09 2014  cpcrw_035.pos
-Sun Dec 14 19:27:09 2014  	Gap: 3
-Sun Dec 14 19:27:09 2014  cpcrw_036.pos
-Sun Dec 14 19:27:09 2014  cpcrw_037.pos
-Sun Dec 14 19:27:09 2014  cpcrw_038.pos
-Sun Dec 14 19:27:09 2014  	Gap: 6
-Sun Dec 14 19:27:09 2014  cpcrw_039.pos
-Sun Dec 14 19:27:09 2014  	Gap: 8
-Sun Dec 14 19:27:09 2014  	Gap: 27
-Sun Dec 14 19:27:09 2014  	Gap: 31
-Sun Dec 14 19:27:09 2014  	Gap: 58
-Sun Dec 14 19:27:09 2014  cpcrw_040.pos
-Sun Dec 14 19:27:09 2014  	Gap: 3
-Sun Dec 14 19:27:09 2014  cpcrw_041.pos
-Sun Dec 14 19:27:09 2014  cpcrw_042.pos
-Sun Dec 14 19:27:09 2014  	Gap: 23
-Sun Dec 14 19:27:09 2014  cpcrw_043.pos
-Sun Dec 14 19:27:09 2014  cpcrw_044.pos
-Sun Dec 14 19:27:09 2014  cpcrw_045.pos
-Sun Dec 14 19:27:09 2014  cpcrw_046.pos
-Sun Dec 14 19:27:09 2014  cpcrw_047.pos
-Sun Dec 14 19:27:09 2014  	Gap: 6
-Sun Dec 14 19:27:09 2014  cpcrw_048.pos
-Sun Dec 14 19:27:09 2014  	Gap: 3
-Sun Dec 14 19:27:09 2014  	Gap: 7
-Sun Dec 14 19:27:09 2014  cpcrw_049.pos
-Sun Dec 14 19:27:09 2014  	Gap: 12
-Sun Dec 14 19:27:09 2014  cpcrw_050.pos
-Sun Dec 14 19:27:09 2014  	Gap: 8
-Sun Dec 14 19:27:09 2014  cpcrw_051.pos
-Sun Dec 14 19:27:09 2014  	Gap: 36
-Sun Dec 14 19:27:09 2014  cpcrw_052.pos
-Sun Dec 14 19:27:09 2014  	Gap: 25
-Sun Dec 14 19:27:09 2014  cpcrw_053.pos
-Sun Dec 14 19:27:09 2014  	Gap: 7
-Sun Dec 14 19:27:09 2014  	Gap: 12
-Sun Dec 14 19:27:09 2014  cpcrw_054.pos
-Sun Dec 14 19:27:09 2014  	Gap: 60
-Sun Dec 14 19:27:09 2014  cpcrw_055.pos
-Sun Dec 14 19:27:09 2014  cpcrw_056.pos
-Sun Dec 14 19:27:09 2014  	Gap: 41
-Sun Dec 14 19:27:09 2014  cpcrw_057.pos
-Sun Dec 14 19:27:09 2014  	Gap: 63
-Sun Dec 14 19:27:09 2014  cpcrw_058.pos
-Sun Dec 14 19:27:09 2014  cpcrw_059.pos
-Sun Dec 14 19:27:09 2014  cpcrw_060.pos
-Sun Dec 14 19:27:09 2014  cpcrw_061.pos
-Sun Dec 14 19:27:09 2014  	Gap: 19
-Sun Dec 14 19:27:09 2014  cpcrw_062.pos
-Sun Dec 14 19:27:09 2014  	Gap: 17
-Sun Dec 14 19:27:09 2014  cpcrw_063.pos
-Sun Dec 14 19:27:09 2014  	Gap: 7
-Sun Dec 14 19:27:09 2014  cpcrw_064.pos
-Sun Dec 14 19:27:09 2014  cpcrw_065.pos
-Sun Dec 14 19:27:09 2014  cpcrw_066.pos
-Sun Dec 14 19:27:09 2014  cpcrw_067.pos
-Sun Dec 14 19:27:09 2014  	Gap: 41
-Sun Dec 14 19:27:09 2014  cpcrw_068.pos
-Sun Dec 14 19:27:09 2014  	Gap: 33
-Sun Dec 14 19:27:09 2014  	Gap: 62
-Sun Dec 14 19:27:09 2014  cpcrw_069.pos
-Sun Dec 14 19:27:09 2014  cpcrw_070.pos
-Sun Dec 14 19:27:09 2014  cpcrw_071.pos
-Sun Dec 14 19:27:09 2014  	Gap: 73
-Sun Dec 14 19:27:09 2014  cpcrw_072.pos
-Sun Dec 14 19:27:09 2014  cpcrw_073.pos
-Sun Dec 14 19:27:09 2014  	Gap: 7
-Sun Dec 14 19:27:09 2014  	Gap: 14
-Sun Dec 14 19:27:09 2014  cpcrw_074.pos
-Sun Dec 14 19:27:10 2014  cpcrw_075.pos
-Sun Dec 14 19:27:10 2014  	Gap: 9
-Sun Dec 14 19:27:10 2014  	Gap: 68
-Sun Dec 14 19:27:10 2014  cpcrw_076.pos
-Sun Dec 14 19:27:10 2014  cpcrw_077.pos
-Sun Dec 14 19:27:10 2014  	Gap: 44
-Sun Dec 14 19:27:10 2014  cpcrw_078.pos
-Sun Dec 14 19:27:10 2014  	Gap: 13
-Sun Dec 14 19:27:10 2014  	Gap: 17
-Sun Dec 14 19:27:10 2014  	Gap: 51
-Sun Dec 14 19:27:10 2014  	Gap: 65
-Sun Dec 14 19:27:10 2014  cpcrw_079.pos
-Sun Dec 14 19:27:10 2014  cpcrw_080.pos
-Sun Dec 14 19:27:10 2014  	Gap: 15
-Sun Dec 14 19:27:10 2014  	Gap: 18
-Sun Dec 14 19:27:10 2014  	Gap: 53
-Sun Dec 14 19:27:10 2014  cpcrw_081.pos
-Sun Dec 14 19:27:10 2014  cpcrw_082.pos
-Sun Dec 14 19:27:10 2014  	Gap: 16
-Sun Dec 14 19:27:10 2014  	Gap: 44
-Sun Dec 14 19:27:10 2014  cpcrw_083.pos
-Sun Dec 14 19:27:10 2014  cpcrw_084.pos
-Sun Dec 14 19:27:10 2014  cpcrw_085.pos
-Sun Dec 14 19:27:10 2014  	Gap: 7
-Sun Dec 14 19:27:10 2014  	Gap: 35
-Sun Dec 14 19:27:10 2014  	Gap: 53
-Sun Dec 14 19:27:10 2014  cpcrw_086.pos
-Sun Dec 14 19:27:10 2014  cpcrw_087.pos
-Sun Dec 14 19:27:10 2014  	Gap: 7
-Sun Dec 14 19:27:10 2014  cpcrw_088.pos
-Sun Dec 14 19:27:10 2014  	Gap: 3
-Sun Dec 14 19:27:10 2014  cpcrw_089.pos
-Sun Dec 14 19:27:10 2014  	Gap: 5
-Sun Dec 14 19:27:10 2014  cpcrw_090.pos
-Sun Dec 14 19:27:10 2014  	Gap: 31
-Sun Dec 14 19:27:10 2014  cpcrw_091.pos
-Sun Dec 14 19:27:10 2014  	Gap: 31
-Sun Dec 14 19:27:10 2014  cpcrw_092.pos
-Sun Dec 14 19:27:10 2014  	Gap: 19
-Sun Dec 14 19:27:10 2014  cpcrw_093.pos
-Sun Dec 14 19:27:10 2014  cpcrw_094.pos
-Sun Dec 14 19:27:10 2014  cpcrw_095.pos
-Sun Dec 14 19:27:10 2014  cpcrw_096.pos
-Sun Dec 14 19:27:10 2014  cpcrw_097.pos
-Sun Dec 14 19:27:10 2014  cpcrw_101.pos
-Sun Dec 14 19:27:10 2014  cpcrw_102.pos
-Sun Dec 14 19:27:10 2014  	Gap: 8
-Sun Dec 14 19:27:10 2014  	Gap: 20
-Sun Dec 14 19:27:10 2014  cpcrw_103.pos
-Sun Dec 14 19:27:10 2014  cpcrw_104.pos
-Sun Dec 14 19:27:10 2014  cpcrw_105.pos
-Sun Dec 14 19:27:10 2014  	Gap: 7
-Sun Dec 14 19:27:10 2014  cpcrw_106.pos
-Sun Dec 14 19:27:10 2014  cpcrw_107.pos
-Sun Dec 14 19:27:10 2014  cpcrw_108.pos
-Sun Dec 14 19:27:10 2014  	Gap: 4
-Sun Dec 14 19:27:10 2014  	Gap: 13
-Sun Dec 14 19:27:10 2014  cpcrw_109.pos
-Sun Dec 14 19:27:10 2014  	Gap: 7
-Sun Dec 14 19:27:10 2014  	Gap: 12
-Sun Dec 14 19:27:10 2014  cpcrw_110.pos
-Sun Dec 14 19:27:10 2014  cpcrw_111.pos
-Sun Dec 14 19:27:10 2014  cpcrw_112.pos
-Sun Dec 14 19:27:10 2014  cpcrw_113.pos
-Sun Dec 14 19:27:10 2014  cpcrw_114.pos
-Sun Dec 14 19:27:10 2014  	Gap: 17
-Sun Dec 14 19:27:10 2014  	Gap: 26
-Sun Dec 14 19:27:10 2014  	Gap: 34
-Sun Dec 14 19:27:10 2014  	Gap: 44
-Sun Dec 14 19:27:10 2014  	Gap: 64
-Sun Dec 14 19:27:10 2014  cpcrw_115.pos
-Sun Dec 14 19:27:10 2014  	Gap: 10
-Sun Dec 14 19:27:10 2014  	Gap: 17
-Sun Dec 14 19:27:10 2014  cpcrw_116.pos
-Sun Dec 14 19:27:10 2014  	Gap: 5
-Sun Dec 14 19:27:10 2014  cpcrw_117.pos
-Sun Dec 14 19:27:10 2014  cpcrw_118.pos
-Sun Dec 14 19:27:10 2014  	Gap: 57
-Sun Dec 14 19:27:10 2014  	Gap: 70
-Sun Dec 14 19:27:10 2014  cpcrw_119.pos
-Sun Dec 14 19:27:10 2014  	Gap: 8
-Sun Dec 14 19:27:10 2014  	Gap: 19
-Sun Dec 14 19:27:10 2014  cpcrw_120.pos
-Sun Dec 14 19:27:10 2014  	Gap: 48
-Sun Dec 14 19:27:10 2014  cpcrw_121.pos
-Sun Dec 14 19:27:10 2014  cpcrw_122.pos
-Sun Dec 14 19:27:10 2014  cpcrw_123.pos
-Sun Dec 14 19:27:10 2014  	Gap: 4
-Sun Dec 14 19:27:10 2014  	Gap: 6
-Sun Dec 14 19:27:10 2014  	Gap: 38
-Sun Dec 14 19:27:10 2014  cpcrw_124.pos
-Sun Dec 14 19:27:10 2014  cpcrw_125.pos
-Sun Dec 14 19:27:10 2014  	Gap: 14
-Sun Dec 14 19:27:10 2014  cpcrw_126.pos
-Sun Dec 14 19:27:10 2014  cpcrw_127.pos
-Sun Dec 14 19:27:10 2014  cpcrw_128.pos
-Sun Dec 14 19:27:10 2014  cpcrw_129.pos
-Sun Dec 14 19:27:10 2014  	Gap: 15
-Sun Dec 14 19:27:10 2014  cpcrw_130.pos
-Sun Dec 14 19:27:10 2014  	Gap: 6
-Sun Dec 14 19:27:10 2014  	Gap: 12
-Sun Dec 14 19:27:10 2014  	Gap: 20
-Sun Dec 14 19:27:10 2014  	Gap: 32
-Sun Dec 14 19:27:10 2014  cpcrw_131.pos
-Sun Dec 14 19:27:10 2014  	Gap: 14
-Sun Dec 14 19:27:10 2014  	Gap: 24
-Sun Dec 14 19:27:10 2014  	Gap: 46
-Sun Dec 14 19:27:10 2014  cpcrw_132.pos
-Sun Dec 14 19:27:10 2014  cpcrw_133.pos
-Sun Dec 14 19:27:10 2014  cpcrw_134.pos
-Sun Dec 14 19:27:10 2014  	Gap: 12
-Sun Dec 14 19:27:10 2014  	Gap: 67
-Sun Dec 14 19:27:10 2014  cpcrw_135.pos
-Sun Dec 14 19:27:10 2014  	Gap: 7
-Sun Dec 14 19:27:10 2014  	Gap: 62
-Sun Dec 14 19:27:10 2014  cpcrw_136.pos
-Sun Dec 14 19:27:10 2014  	Gap: 5
-Sun Dec 14 19:27:10 2014  cpcrw_137.pos
-Sun Dec 14 19:27:10 2014  cpcrw_138.pos
-Sun Dec 14 19:27:10 2014  cpcrw_139.pos
-Sun Dec 14 19:27:10 2014  cpcrw_151.pos
-Sun Dec 14 19:27:10 2014  	Gap: 9
-Sun Dec 14 19:27:10 2014  	Gap: 13
-Sun Dec 14 19:27:10 2014  	Gap: 18
-Sun Dec 14 19:27:10 2014  cpcrw_152.pos
-Sun Dec 14 19:27:10 2014  cpcrw_153.pos
-Sun Dec 14 19:27:10 2014  	Gap: 8
-Sun Dec 14 19:27:10 2014  cpcrw_154.pos
-Sun Dec 14 19:27:10 2014  	Gap: 22
-Sun Dec 14 19:27:10 2014  cpcrw_155.pos
-Sun Dec 14 19:27:10 2014  	Gap: 6
-Sun Dec 14 19:27:10 2014  cpcrw_156.pos
-Sun Dec 14 19:27:10 2014  cpcrw_157.pos
-Sun Dec 14 19:27:10 2014  cpcrw_158.pos
-Sun Dec 14 19:27:10 2014  cpcrw_159.pos
-Sun Dec 14 19:27:10 2014  	Gap: 6
-Sun Dec 14 19:27:10 2014  cpcrw_160.pos
-Sun Dec 14 19:27:10 2014  cpcrw_161.pos
-Sun Dec 14 19:27:10 2014  cpcrw_162.pos
-Sun Dec 14 19:27:10 2014  	Gap: 34
-Sun Dec 14 19:27:10 2014  	Gap: 45
-Sun Dec 14 19:27:10 2014  cpcrw_163.pos
-Sun Dec 14 19:27:10 2014  cpcrw_164.pos
-Sun Dec 14 19:27:10 2014  cpcrw_165.pos
-Sun Dec 14 19:27:10 2014  	Gap: 17
-Sun Dec 14 19:27:10 2014  cpcrw_166.pos
-Sun Dec 14 19:27:10 2014  cpcrw_167.pos
-Sun Dec 14 19:27:10 2014  	Gap: 21
-Sun Dec 14 19:27:10 2014  cpcrw_168.pos
-Sun Dec 14 19:27:10 2014  cpcrw_169.pos
-Sun Dec 14 19:27:10 2014  cpcrw_170.pos
-Sun Dec 14 19:27:10 2014  cpcrw_171.pos
-Sun Dec 14 19:27:11 2014  cpcrw_172.pos
-Sun Dec 14 19:27:11 2014  cpcrw_173.pos
-Sun Dec 14 19:27:11 2014  cpcrw_174.pos
-Sun Dec 14 19:27:11 2014  cpcrw_175.pos
-Sun Dec 14 19:27:11 2014  	Gap: 45
-Sun Dec 14 19:27:11 2014  cpcrw_176.pos
-Sun Dec 14 19:27:11 2014  	Gap: 5
-Sun Dec 14 19:27:11 2014  cpcrw_177.pos
-Sun Dec 14 19:27:11 2014  	Gap: 4
-Sun Dec 14 19:27:11 2014  cpcrw_178.pos
-Sun Dec 14 19:27:11 2014  cpcrw_179.pos
-Sun Dec 14 19:27:11 2014  cpcrw_180.pos
-Sun Dec 14 19:27:11 2014  cpcrw_186.pos
-Sun Dec 14 19:27:11 2014  cpcrw_187.pos
-Sun Dec 14 19:27:11 2014  cpcrw_188.pos
-Sun Dec 14 19:27:11 2014  	Gap: 8
-Sun Dec 14 19:27:11 2014  cpcrw_191.pos
-Sun Dec 14 19:27:11 2014  cpcrw_192.pos
-Sun Dec 14 19:27:11 2014  cpcrw_198.pos
-Sun Dec 14 19:27:11 2014  cpcrw_212.pos
-Sun Dec 14 19:27:11 2014  cpcrw_213.pos
-Sun Dec 14 19:27:11 2014  cpcrw_219.pos
-Sun Dec 14 19:27:11 2014  cpcrw_228.pos
-Sun Dec 14 19:27:11 2014  cpcrw_229.pos
-Sun Dec 14 19:27:11 2014  cpcrw_233.pos
-Sun Dec 14 19:27:11 2014  cpcrw_234.pos
-Sun Dec 14 19:27:11 2014  cpcrw_240.pos
-Sun Dec 14 19:27:11 2014  cpcrw_255.pos
-Sun Dec 14 19:27:11 2014  cpcrw_261.pos
-Sun Dec 14 19:27:11 2014  cpcrw_266.pos
-Sun Dec 14 19:27:11 2014  cpcrw_269.pos
-Sun Dec 14 19:27:11 2014  	Gap: 6
-Sun Dec 14 19:27:11 2014  	Gap: 14
-Sun Dec 14 19:27:11 2014  cpcrw_270.pos
-Sun Dec 14 19:27:11 2014  	Gap: 7
-Sun Dec 14 19:27:11 2014  	Gap: 11
-Sun Dec 14 19:27:11 2014  	Gap: 13
-Sun Dec 14 19:27:11 2014  	Gap: 16
-Sun Dec 14 19:27:11 2014  	Gap: 19
-Sun Dec 14 19:27:11 2014  	Gap: 27
-Sun Dec 14 19:27:11 2014  cpcrw_271.pos
-Sun Dec 14 19:27:11 2014  	Gap: 5
-Sun Dec 14 19:27:11 2014  	Gap: 8
-Sun Dec 14 19:27:11 2014  	Gap: 10
-Sun Dec 14 19:27:11 2014  	Gap: 11
-Sun Dec 14 19:27:11 2014  	Gap: 13
-Sun Dec 14 19:27:11 2014  	Gap: 19
-Sun Dec 14 19:27:11 2014  cpcrw_272.pos
-Sun Dec 14 19:27:11 2014  	Gap: 7
-Sun Dec 14 19:27:11 2014  	Gap: 9
-Sun Dec 14 19:27:11 2014  	Gap: 12
-Sun Dec 14 19:27:11 2014  	Gap: 14
-Sun Dec 14 19:27:11 2014  	Gap: 16
-Sun Dec 14 19:27:11 2014  cpcrw_273.pos
-Sun Dec 14 19:27:11 2014  cpcrw_274.pos
-Sun Dec 14 19:27:11 2014  	Gap: 6
-Sun Dec 14 19:27:11 2014  cpcrw_275.pos
-Sun Dec 14 19:27:11 2014  cpcrw_276.pos
-Sun Dec 14 19:27:11 2014  cpcrw_277.pos
-Sun Dec 14 19:27:11 2014  cpcrw_278.pos
-Sun Dec 14 19:27:11 2014  cpcrw_279.pos
-Sun Dec 14 19:27:11 2014  cpcrw_280.pos
-Sun Dec 14 19:27:11 2014  cpcrw_281.pos
-Sun Dec 14 19:27:11 2014  cpcrw_282.pos
-Sun Dec 14 19:27:11 2014  cpcrw_283.pos
-Sun Dec 14 19:27:11 2014  cpcrw_285.pos
-Sun Dec 14 19:27:11 2014  cpcrw_286.pos
-Sun Dec 14 19:27:11 2014  cpcrw_287.pos
-Sun Dec 14 19:27:11 2014  cpcrw_288.pos
-Sun Dec 14 19:27:11 2014  cpcrw_289.pos
-Sun Dec 14 19:27:11 2014  cpcrw_290.pos
-Sun Dec 14 19:27:11 2014  cpcrw_291.pos
-Sun Dec 14 19:27:11 2014  cpcrw_292.pos
-Sun Dec 14 19:27:11 2014  cpcrw_301.pos
-Sun Dec 14 19:27:11 2014  cpcrw_bc284.pos
-Sun Dec 14 19:27:11 2014  cpcrw_bc302.pos
-Sun Dec 14 19:27:11 2014  cpcrw_bc303.pos
-Sun Dec 14 19:27:11 2014  We are done! Melting...
-Sun Dec 14 19:27:11 2014  ringwidths rows = 7760 cols = 3
-Sun Dec 14 19:27:11 2014  Saving outputs//ringwidths.csv
-Sun Dec 14 19:27:11 2014  Reading info on good- and bad-quality scans...
-Sun Dec 14 19:27:11 2014  core_data/scans_good.txt
-Sun Dec 14 19:27:11 2014  core_data/scans_bad.txt
-Sun Dec 14 19:27:11 2014  Making diagnostic plots...
-Sun Dec 14 19:27:14 2014  Saving outputs//3-read_coodata/3-qc1.pdf
-Sun Dec 14 19:27:19 2014  Saving outputs//3-read_coodata/3-qc2.pdf
-Sun Dec 14 19:27:19 2014  2 outliers in decade 2010-2019 (out of 839 rings)
+Tue Dec 30 06:59:28 2014  Welcome to 3-read_coodata.R
+Tue Dec 30 06:59:29 2014  Welcome to coodata.R
+Tue Dec 30 06:59:29 2014  We know how to process CooRecorder data files!
+Tue Dec 30 06:59:29 2014  Looking in core_data/
+Tue Dec 30 06:59:29 2014  Scanning for last year data; default = 2013
+Tue Dec 30 06:59:29 2014  cpcrw_001.pos NA 62
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_002.pos NA 33
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_003.pos NA 75
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_004.pos NA 16
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_005.pos NA 53
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_006.pos NA 53
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_007.pos NA 69
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_008.pos NA 53
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_009.pos NA 66
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_010.pos NA 79
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_011.pos NA 27
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_012.pos NA 77
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_013.pos NA 79
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_014.pos NA 74
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_015.pos NA 85
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_016.pos NA 63
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_017.pos NA 30
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_018.pos NA 31
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_019.pos NA 41
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_020.pos NA 73
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_021.pos NA 25
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:29 2014  cpcrw_022.pos NA 18
+Tue Dec 30 06:59:29 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_023.pos NA 22
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_024.pos NA 82
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_025.pos NA 53
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_026.pos NA 68
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_027.pos NA 10
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_028.pos NA 80
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_029.pos NA 24
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_030.pos NA 62
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_031.pos NA 71
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_032.pos NA 48
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_033.pos NA 32
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_034.pos NA 17
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_035.pos NA 40
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_036.pos NA 24
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_037.pos NA 30
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_038.pos NA 55
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_039.pos NA 81
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_040.pos NA 23
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_041.pos NA 14
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_042.pos NA 43
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_043.pos NA 48
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_044.pos NA 43
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_045.pos NA 40
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_046.pos NA 47
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_047.pos NA 44
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_048.pos NA 27
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_049.pos NA 26
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_050.pos NA 39
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_051.pos NA 57
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_052.pos NA 64
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_053.pos NA 25
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_054.pos NA 72
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_055.pos NA 23
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_056.pos NA 55
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_057.pos NA 77
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_058.pos NA 26
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_059.pos NA 27
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_060.pos NA 81
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_061.pos NA 54
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_062.pos NA 35
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_063.pos NA 83
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_064.pos NA 32
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_065.pos NA 32
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_066.pos NA 79
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_067.pos NA 49
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_068.pos NA 74
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_069.pos NA 35
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_070.pos NA 19
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_071.pos NA 82
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_072.pos NA 79
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_073.pos NA 76
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_074.pos NA 78
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_075.pos NA 85
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_076.pos NA 35
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_077.pos NA 55
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_078.pos NA 74
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_079.pos NA 48
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_080.pos NA 61
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_081.pos NA 43
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_082.pos NA 52
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_083.pos NA 87
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_084.pos NA 47
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_085.pos NA 59
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_086.pos NA 31
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_087.pos NA 59
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_088.pos NA 39
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_089.pos NA 38
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_090.pos NA 52
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_091.pos NA 49
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_092.pos NA 36
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_093.pos NA 40
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_094.pos NA 33
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_095.pos NA 32
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_096.pos NA 13
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_097.pos NA 30
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_101.pos NA 54
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_102.pos NA 32
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_103.pos NA 43
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_104.pos NA 43
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_105.pos NA 36
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_106.pos NA 22
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_107.pos NA 21
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_108.pos NA 25
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_109.pos NA 59
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_110.pos NA 35
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_111.pos NA 33
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_112.pos NA 53
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_113.pos NA 56
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_114.pos NA 78
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_115.pos NA 80
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_116.pos NA 28
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_117.pos NA 25
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_118.pos NA 77
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_119.pos NA 76
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_120.pos NA 58
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_121.pos NA 31
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_122.pos NA 35
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_123.pos NA 51
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_124.pos NA 66
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_125.pos NA 31
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_126.pos NA 32
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_127.pos NA 32
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_128.pos NA 38
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_129.pos NA 60
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_130.pos NA 60
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_131.pos NA 73
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_132.pos NA 29
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_133.pos NA 22
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_134.pos NA 79
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_135.pos NA 70
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_136.pos NA 15
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_137.pos NA 40
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_138.pos NA 32
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_139.pos NA 21
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_151.pos NA 41
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_152.pos NA 22
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_153.pos NA 61
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_154.pos NA 39
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_155.pos NA 35
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_156.pos NA 15
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_157.pos NA 29
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_158.pos NA 29
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_159.pos NA 38
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_160.pos NA 35
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_161.pos NA 73
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_162.pos NA 52
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_163.pos NA 39
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_164.pos NA 20
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_165.pos NA 25
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_166.pos NA 39
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_167.pos NA 34
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_168.pos NA 30
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_169.pos NA 40
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_170.pos NA 38
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_171.pos NA 42
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_172.pos NA 29
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_173.pos NA 32
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_174.pos NA 23
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_175.pos NA 56
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_176.pos NA 66
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_177.pos NA 22
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_178.pos NA 18
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_179.pos NA 29
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_180.pos NA 16
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_181.pos NA 67
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_182.pos NA 44
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_183.pos NA 44
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_184.pos NA 39
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_185.pos NA 61
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_186.pos NA 34
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_187.pos NA 26
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_188.pos NA 43
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_189.pos NA 78
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_190.pos NA 92
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_191.pos NA 21
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_192.pos NA 20
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_194.pos NA 78
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_195.pos NA 81
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_196.pos NA 57
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_198.pos NA 40
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_201.pos NA 36
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_202.pos NA 58
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_203.pos NA 56
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_204.pos NA 36
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_205.pos NA 25
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_206.pos NA 42
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_207.pos NA 25
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_208.pos NA 36
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_209.pos NA 40
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_210.pos NA 33
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_211.pos NA 33
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_212.pos NA 16
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_213.pos NA 10
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_214.pos NA 36
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_215.pos NA 54
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_216.pos NA 51
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_217.pos NA 46
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_218.pos NA 43
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_219.pos NA 60
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_220.pos NA 50
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_221.pos NA 73
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_222.pos NA 78
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_223.pos NA 58
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_224.pos NA 75
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_225.pos NA 70
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_226.pos NA 66
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_227.pos NA 73
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_228.pos NA 32
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_229.pos NA 27
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_230.pos NA 80
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_233.pos NA 15
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_234.pos NA 20
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_240.pos NA 19
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_255.pos NA 12
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_261.pos NA 39
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_266.pos NA 26
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_269.pos NA 59
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_270.pos NA 70
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_271.pos NA 50
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_272.pos NA 26
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_273.pos NA 53
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_274.pos NA 33
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_275.pos NA 12
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_276.pos NA 23
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_277.pos NA 39
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_278.pos NA 9
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_279.pos NA 11
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_280.pos NA 32
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_281.pos NA 27
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_282.pos NA 16
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_283.pos NA 51
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_285.pos NA 16
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_286.pos NA 38
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_287.pos NA 22
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_288.pos NA 24
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_289.pos NA 16
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_290.pos NA 23
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_291.pos NA 10
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_292.pos NA 27
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_301.pos NA 64
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_bc284.pos NA 84
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_bc302.pos NA 85
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  cpcrw_bc303.pos NA 85
+Tue Dec 30 06:59:30 2014  *** No year found! Assigning default value ***
+Tue Dec 30 06:59:30 2014  Now building your custom-designed data frame...
+Tue Dec 30 06:59:30 2014  cpcrw_001.pos
+Tue Dec 30 06:59:30 2014  	Gap: 7
+Tue Dec 30 06:59:30 2014  	Gap: 36
+Tue Dec 30 06:59:30 2014  cpcrw_002.pos
+Tue Dec 30 06:59:30 2014  	Gap: 10
+Tue Dec 30 06:59:30 2014  cpcrw_003.pos
+Tue Dec 30 06:59:30 2014  	Gap: 6
+Tue Dec 30 06:59:30 2014  	Gap: 17
+Tue Dec 30 06:59:30 2014  	Gap: 24
+Tue Dec 30 06:59:30 2014  cpcrw_004.pos
+Tue Dec 30 06:59:30 2014  cpcrw_005.pos
+Tue Dec 30 06:59:30 2014  cpcrw_006.pos
+Tue Dec 30 06:59:30 2014  cpcrw_007.pos
+Tue Dec 30 06:59:30 2014  	Gap: 32
+Tue Dec 30 06:59:30 2014  cpcrw_008.pos
+Tue Dec 30 06:59:30 2014  	Gap: 10
+Tue Dec 30 06:59:30 2014  	Gap: 15
+Tue Dec 30 06:59:30 2014  cpcrw_009.pos
+Tue Dec 30 06:59:30 2014  	Gap: 58
+Tue Dec 30 06:59:30 2014  cpcrw_010.pos
+Tue Dec 30 06:59:30 2014  	Gap: 66
+Tue Dec 30 06:59:30 2014  cpcrw_011.pos
+Tue Dec 30 06:59:30 2014  cpcrw_012.pos
+Tue Dec 30 06:59:30 2014  cpcrw_013.pos
+Tue Dec 30 06:59:30 2014  	Gap: 22
+Tue Dec 30 06:59:30 2014  cpcrw_014.pos
+Tue Dec 30 06:59:30 2014  	Gap: 23
+Tue Dec 30 06:59:30 2014  cpcrw_015.pos
+Tue Dec 30 06:59:30 2014  	Gap: 19
+Tue Dec 30 06:59:30 2014  	Gap: 51
+Tue Dec 30 06:59:30 2014  cpcrw_016.pos
+Tue Dec 30 06:59:30 2014  	Gap: 20
+Tue Dec 30 06:59:30 2014  	Gap: 37
+Tue Dec 30 06:59:30 2014  	Gap: 51
+Tue Dec 30 06:59:30 2014  cpcrw_017.pos
+Tue Dec 30 06:59:30 2014  cpcrw_018.pos
+Tue Dec 30 06:59:30 2014  cpcrw_019.pos
+Tue Dec 30 06:59:30 2014  	Gap: 8
+Tue Dec 30 06:59:30 2014  	Gap: 10
+Tue Dec 30 06:59:30 2014  	Gap: 15
+Tue Dec 30 06:59:30 2014  	Gap: 26
+Tue Dec 30 06:59:30 2014  cpcrw_020.pos
+Tue Dec 30 06:59:30 2014  	Gap: 58
+Tue Dec 30 06:59:30 2014  cpcrw_021.pos
+Tue Dec 30 06:59:30 2014  cpcrw_022.pos
+Tue Dec 30 06:59:30 2014  cpcrw_023.pos
+Tue Dec 30 06:59:30 2014  cpcrw_024.pos
+Tue Dec 30 06:59:30 2014  	Gap: 15
+Tue Dec 30 06:59:30 2014  cpcrw_025.pos
+Tue Dec 30 06:59:30 2014  	Gap: 14
+Tue Dec 30 06:59:30 2014  	Gap: 24
+Tue Dec 30 06:59:30 2014  	Gap: 44
+Tue Dec 30 06:59:30 2014  cpcrw_026.pos
+Tue Dec 30 06:59:30 2014  	Gap: 9
+Tue Dec 30 06:59:30 2014  	Gap: 51
+Tue Dec 30 06:59:30 2014  cpcrw_027.pos
+Tue Dec 30 06:59:30 2014  cpcrw_028.pos
+Tue Dec 30 06:59:30 2014  	Gap: 8
+Tue Dec 30 06:59:30 2014  cpcrw_029.pos
+Tue Dec 30 06:59:30 2014  cpcrw_030.pos
+Tue Dec 30 06:59:30 2014  cpcrw_031.pos
+Tue Dec 30 06:59:30 2014  cpcrw_032.pos
+Tue Dec 30 06:59:30 2014  cpcrw_033.pos
+Tue Dec 30 06:59:30 2014  cpcrw_034.pos
+Tue Dec 30 06:59:30 2014  cpcrw_035.pos
+Tue Dec 30 06:59:30 2014  	Gap: 3
+Tue Dec 30 06:59:30 2014  cpcrw_036.pos
+Tue Dec 30 06:59:30 2014  cpcrw_037.pos
+Tue Dec 30 06:59:30 2014  cpcrw_038.pos
+Tue Dec 30 06:59:30 2014  	Gap: 6
+Tue Dec 30 06:59:30 2014  cpcrw_039.pos
+Tue Dec 30 06:59:30 2014  	Gap: 8
+Tue Dec 30 06:59:30 2014  	Gap: 27
+Tue Dec 30 06:59:30 2014  	Gap: 31
+Tue Dec 30 06:59:30 2014  	Gap: 58
+Tue Dec 30 06:59:30 2014  cpcrw_040.pos
+Tue Dec 30 06:59:30 2014  	Gap: 3
+Tue Dec 30 06:59:30 2014  cpcrw_041.pos
+Tue Dec 30 06:59:30 2014  cpcrw_042.pos
+Tue Dec 30 06:59:30 2014  	Gap: 23
+Tue Dec 30 06:59:30 2014  cpcrw_043.pos
+Tue Dec 30 06:59:30 2014  cpcrw_044.pos
+Tue Dec 30 06:59:31 2014  cpcrw_045.pos
+Tue Dec 30 06:59:31 2014  cpcrw_046.pos
+Tue Dec 30 06:59:31 2014  cpcrw_047.pos
+Tue Dec 30 06:59:31 2014  	Gap: 6
+Tue Dec 30 06:59:31 2014  cpcrw_048.pos
+Tue Dec 30 06:59:31 2014  	Gap: 3
+Tue Dec 30 06:59:31 2014  	Gap: 7
+Tue Dec 30 06:59:31 2014  cpcrw_049.pos
+Tue Dec 30 06:59:31 2014  	Gap: 12
+Tue Dec 30 06:59:31 2014  cpcrw_050.pos
+Tue Dec 30 06:59:31 2014  	Gap: 8
+Tue Dec 30 06:59:31 2014  cpcrw_051.pos
+Tue Dec 30 06:59:31 2014  	Gap: 36
+Tue Dec 30 06:59:31 2014  cpcrw_052.pos
+Tue Dec 30 06:59:31 2014  	Gap: 25
+Tue Dec 30 06:59:31 2014  cpcrw_053.pos
+Tue Dec 30 06:59:31 2014  	Gap: 7
+Tue Dec 30 06:59:31 2014  	Gap: 12
+Tue Dec 30 06:59:31 2014  cpcrw_054.pos
+Tue Dec 30 06:59:31 2014  	Gap: 60
+Tue Dec 30 06:59:31 2014  cpcrw_055.pos
+Tue Dec 30 06:59:31 2014  cpcrw_056.pos
+Tue Dec 30 06:59:31 2014  	Gap: 41
+Tue Dec 30 06:59:31 2014  cpcrw_057.pos
+Tue Dec 30 06:59:31 2014  	Gap: 63
+Tue Dec 30 06:59:31 2014  cpcrw_058.pos
+Tue Dec 30 06:59:31 2014  cpcrw_059.pos
+Tue Dec 30 06:59:31 2014  cpcrw_060.pos
+Tue Dec 30 06:59:31 2014  cpcrw_061.pos
+Tue Dec 30 06:59:31 2014  	Gap: 19
+Tue Dec 30 06:59:31 2014  cpcrw_062.pos
+Tue Dec 30 06:59:31 2014  	Gap: 17
+Tue Dec 30 06:59:31 2014  cpcrw_063.pos
+Tue Dec 30 06:59:31 2014  	Gap: 7
+Tue Dec 30 06:59:31 2014  cpcrw_064.pos
+Tue Dec 30 06:59:31 2014  cpcrw_065.pos
+Tue Dec 30 06:59:31 2014  cpcrw_066.pos
+Tue Dec 30 06:59:31 2014  cpcrw_067.pos
+Tue Dec 30 06:59:31 2014  	Gap: 41
+Tue Dec 30 06:59:31 2014  cpcrw_068.pos
+Tue Dec 30 06:59:31 2014  	Gap: 33
+Tue Dec 30 06:59:31 2014  	Gap: 62
+Tue Dec 30 06:59:31 2014  cpcrw_069.pos
+Tue Dec 30 06:59:31 2014  cpcrw_070.pos
+Tue Dec 30 06:59:31 2014  cpcrw_071.pos
+Tue Dec 30 06:59:31 2014  	Gap: 73
+Tue Dec 30 06:59:31 2014  cpcrw_072.pos
+Tue Dec 30 06:59:31 2014  cpcrw_073.pos
+Tue Dec 30 06:59:31 2014  	Gap: 7
+Tue Dec 30 06:59:31 2014  	Gap: 14
+Tue Dec 30 06:59:31 2014  cpcrw_074.pos
+Tue Dec 30 06:59:31 2014  cpcrw_075.pos
+Tue Dec 30 06:59:31 2014  	Gap: 9
+Tue Dec 30 06:59:31 2014  	Gap: 68
+Tue Dec 30 06:59:31 2014  cpcrw_076.pos
+Tue Dec 30 06:59:31 2014  cpcrw_077.pos
+Tue Dec 30 06:59:31 2014  	Gap: 44
+Tue Dec 30 06:59:31 2014  cpcrw_078.pos
+Tue Dec 30 06:59:31 2014  	Gap: 13
+Tue Dec 30 06:59:31 2014  	Gap: 17
+Tue Dec 30 06:59:31 2014  	Gap: 51
+Tue Dec 30 06:59:31 2014  	Gap: 65
+Tue Dec 30 06:59:31 2014  cpcrw_079.pos
+Tue Dec 30 06:59:31 2014  cpcrw_080.pos
+Tue Dec 30 06:59:31 2014  	Gap: 15
+Tue Dec 30 06:59:31 2014  	Gap: 18
+Tue Dec 30 06:59:31 2014  	Gap: 53
+Tue Dec 30 06:59:31 2014  cpcrw_081.pos
+Tue Dec 30 06:59:31 2014  cpcrw_082.pos
+Tue Dec 30 06:59:31 2014  	Gap: 16
+Tue Dec 30 06:59:31 2014  	Gap: 44
+Tue Dec 30 06:59:31 2014  cpcrw_083.pos
+Tue Dec 30 06:59:31 2014  cpcrw_084.pos
+Tue Dec 30 06:59:31 2014  cpcrw_085.pos
+Tue Dec 30 06:59:31 2014  	Gap: 7
+Tue Dec 30 06:59:31 2014  	Gap: 35
+Tue Dec 30 06:59:31 2014  	Gap: 53
+Tue Dec 30 06:59:31 2014  cpcrw_086.pos
+Tue Dec 30 06:59:31 2014  cpcrw_087.pos
+Tue Dec 30 06:59:31 2014  	Gap: 7
+Tue Dec 30 06:59:31 2014  cpcrw_088.pos
+Tue Dec 30 06:59:31 2014  	Gap: 3
+Tue Dec 30 06:59:31 2014  cpcrw_089.pos
+Tue Dec 30 06:59:31 2014  	Gap: 5
+Tue Dec 30 06:59:31 2014  cpcrw_090.pos
+Tue Dec 30 06:59:31 2014  	Gap: 31
+Tue Dec 30 06:59:31 2014  cpcrw_091.pos
+Tue Dec 30 06:59:31 2014  	Gap: 31
+Tue Dec 30 06:59:31 2014  cpcrw_092.pos
+Tue Dec 30 06:59:31 2014  	Gap: 19
+Tue Dec 30 06:59:31 2014  cpcrw_093.pos
+Tue Dec 30 06:59:31 2014  cpcrw_094.pos
+Tue Dec 30 06:59:31 2014  cpcrw_095.pos
+Tue Dec 30 06:59:31 2014  cpcrw_096.pos
+Tue Dec 30 06:59:31 2014  cpcrw_097.pos
+Tue Dec 30 06:59:31 2014  cpcrw_101.pos
+Tue Dec 30 06:59:31 2014  cpcrw_102.pos
+Tue Dec 30 06:59:31 2014  	Gap: 8
+Tue Dec 30 06:59:31 2014  	Gap: 20
+Tue Dec 30 06:59:31 2014  cpcrw_103.pos
+Tue Dec 30 06:59:31 2014  cpcrw_104.pos
+Tue Dec 30 06:59:31 2014  cpcrw_105.pos
+Tue Dec 30 06:59:31 2014  	Gap: 7
+Tue Dec 30 06:59:31 2014  cpcrw_106.pos
+Tue Dec 30 06:59:31 2014  cpcrw_107.pos
+Tue Dec 30 06:59:31 2014  cpcrw_108.pos
+Tue Dec 30 06:59:31 2014  	Gap: 4
+Tue Dec 30 06:59:31 2014  	Gap: 13
+Tue Dec 30 06:59:31 2014  cpcrw_109.pos
+Tue Dec 30 06:59:31 2014  	Gap: 7
+Tue Dec 30 06:59:31 2014  	Gap: 12
+Tue Dec 30 06:59:31 2014  cpcrw_110.pos
+Tue Dec 30 06:59:31 2014  cpcrw_111.pos
+Tue Dec 30 06:59:31 2014  cpcrw_112.pos
+Tue Dec 30 06:59:31 2014  cpcrw_113.pos
+Tue Dec 30 06:59:31 2014  cpcrw_114.pos
+Tue Dec 30 06:59:31 2014  	Gap: 17
+Tue Dec 30 06:59:31 2014  	Gap: 26
+Tue Dec 30 06:59:31 2014  	Gap: 34
+Tue Dec 30 06:59:31 2014  	Gap: 44
+Tue Dec 30 06:59:31 2014  	Gap: 64
+Tue Dec 30 06:59:31 2014  cpcrw_115.pos
+Tue Dec 30 06:59:31 2014  	Gap: 10
+Tue Dec 30 06:59:31 2014  	Gap: 17
+Tue Dec 30 06:59:31 2014  cpcrw_116.pos
+Tue Dec 30 06:59:31 2014  	Gap: 5
+Tue Dec 30 06:59:31 2014  cpcrw_117.pos
+Tue Dec 30 06:59:31 2014  cpcrw_118.pos
+Tue Dec 30 06:59:31 2014  	Gap: 57
+Tue Dec 30 06:59:31 2014  	Gap: 70
+Tue Dec 30 06:59:31 2014  cpcrw_119.pos
+Tue Dec 30 06:59:31 2014  	Gap: 8
+Tue Dec 30 06:59:31 2014  	Gap: 19
+Tue Dec 30 06:59:31 2014  cpcrw_120.pos
+Tue Dec 30 06:59:32 2014  	Gap: 48
+Tue Dec 30 06:59:32 2014  cpcrw_121.pos
+Tue Dec 30 06:59:32 2014  cpcrw_122.pos
+Tue Dec 30 06:59:32 2014  cpcrw_123.pos
+Tue Dec 30 06:59:32 2014  	Gap: 4
+Tue Dec 30 06:59:32 2014  	Gap: 6
+Tue Dec 30 06:59:32 2014  	Gap: 38
+Tue Dec 30 06:59:32 2014  cpcrw_124.pos
+Tue Dec 30 06:59:32 2014  cpcrw_125.pos
+Tue Dec 30 06:59:32 2014  	Gap: 14
+Tue Dec 30 06:59:32 2014  cpcrw_126.pos
+Tue Dec 30 06:59:32 2014  cpcrw_127.pos
+Tue Dec 30 06:59:32 2014  cpcrw_128.pos
+Tue Dec 30 06:59:32 2014  cpcrw_129.pos
+Tue Dec 30 06:59:32 2014  	Gap: 15
+Tue Dec 30 06:59:32 2014  cpcrw_130.pos
+Tue Dec 30 06:59:32 2014  	Gap: 6
+Tue Dec 30 06:59:32 2014  	Gap: 12
+Tue Dec 30 06:59:32 2014  	Gap: 20
+Tue Dec 30 06:59:32 2014  	Gap: 32
+Tue Dec 30 06:59:32 2014  cpcrw_131.pos
+Tue Dec 30 06:59:32 2014  	Gap: 14
+Tue Dec 30 06:59:32 2014  	Gap: 24
+Tue Dec 30 06:59:32 2014  	Gap: 46
+Tue Dec 30 06:59:32 2014  cpcrw_132.pos
+Tue Dec 30 06:59:32 2014  cpcrw_133.pos
+Tue Dec 30 06:59:32 2014  cpcrw_134.pos
+Tue Dec 30 06:59:32 2014  	Gap: 12
+Tue Dec 30 06:59:32 2014  	Gap: 67
+Tue Dec 30 06:59:32 2014  cpcrw_135.pos
+Tue Dec 30 06:59:32 2014  	Gap: 7
+Tue Dec 30 06:59:32 2014  	Gap: 62
+Tue Dec 30 06:59:32 2014  cpcrw_136.pos
+Tue Dec 30 06:59:32 2014  	Gap: 5
+Tue Dec 30 06:59:32 2014  cpcrw_137.pos
+Tue Dec 30 06:59:32 2014  cpcrw_138.pos
+Tue Dec 30 06:59:32 2014  cpcrw_139.pos
+Tue Dec 30 06:59:32 2014  cpcrw_151.pos
+Tue Dec 30 06:59:32 2014  	Gap: 9
+Tue Dec 30 06:59:32 2014  	Gap: 13
+Tue Dec 30 06:59:32 2014  	Gap: 18
+Tue Dec 30 06:59:32 2014  cpcrw_152.pos
+Tue Dec 30 06:59:32 2014  cpcrw_153.pos
+Tue Dec 30 06:59:32 2014  	Gap: 8
+Tue Dec 30 06:59:32 2014  cpcrw_154.pos
+Tue Dec 30 06:59:32 2014  	Gap: 22
+Tue Dec 30 06:59:32 2014  cpcrw_155.pos
+Tue Dec 30 06:59:32 2014  	Gap: 6
+Tue Dec 30 06:59:32 2014  cpcrw_156.pos
+Tue Dec 30 06:59:32 2014  cpcrw_157.pos
+Tue Dec 30 06:59:32 2014  cpcrw_158.pos
+Tue Dec 30 06:59:32 2014  cpcrw_159.pos
+Tue Dec 30 06:59:32 2014  	Gap: 6
+Tue Dec 30 06:59:32 2014  cpcrw_160.pos
+Tue Dec 30 06:59:32 2014  cpcrw_161.pos
+Tue Dec 30 06:59:32 2014  cpcrw_162.pos
+Tue Dec 30 06:59:32 2014  	Gap: 34
+Tue Dec 30 06:59:32 2014  	Gap: 45
+Tue Dec 30 06:59:32 2014  cpcrw_163.pos
+Tue Dec 30 06:59:32 2014  cpcrw_164.pos
+Tue Dec 30 06:59:32 2014  cpcrw_165.pos
+Tue Dec 30 06:59:32 2014  	Gap: 17
+Tue Dec 30 06:59:32 2014  cpcrw_166.pos
+Tue Dec 30 06:59:32 2014  cpcrw_167.pos
+Tue Dec 30 06:59:32 2014  	Gap: 21
+Tue Dec 30 06:59:32 2014  cpcrw_168.pos
+Tue Dec 30 06:59:32 2014  cpcrw_169.pos
+Tue Dec 30 06:59:32 2014  cpcrw_170.pos
+Tue Dec 30 06:59:32 2014  cpcrw_171.pos
+Tue Dec 30 06:59:32 2014  cpcrw_172.pos
+Tue Dec 30 06:59:32 2014  cpcrw_173.pos
+Tue Dec 30 06:59:32 2014  cpcrw_174.pos
+Tue Dec 30 06:59:32 2014  cpcrw_175.pos
+Tue Dec 30 06:59:32 2014  	Gap: 45
+Tue Dec 30 06:59:32 2014  cpcrw_176.pos
+Tue Dec 30 06:59:32 2014  	Gap: 5
+Tue Dec 30 06:59:32 2014  cpcrw_177.pos
+Tue Dec 30 06:59:32 2014  	Gap: 4
+Tue Dec 30 06:59:32 2014  cpcrw_178.pos
+Tue Dec 30 06:59:32 2014  cpcrw_179.pos
+Tue Dec 30 06:59:32 2014  cpcrw_180.pos
+Tue Dec 30 06:59:32 2014  cpcrw_181.pos
+Tue Dec 30 06:59:32 2014  	Gap: 10
+Tue Dec 30 06:59:32 2014  	Gap: 18
+Tue Dec 30 06:59:32 2014  cpcrw_182.pos
+Tue Dec 30 06:59:32 2014  	Gap: 5
+Tue Dec 30 06:59:32 2014  	Gap: 7
+Tue Dec 30 06:59:32 2014  cpcrw_183.pos
+Tue Dec 30 06:59:32 2014  cpcrw_184.pos
+Tue Dec 30 06:59:32 2014  	Gap: 3
+Tue Dec 30 06:59:32 2014  cpcrw_185.pos
+Tue Dec 30 06:59:32 2014  	Gap: 44
+Tue Dec 30 06:59:32 2014  cpcrw_186.pos
+Tue Dec 30 06:59:32 2014  cpcrw_187.pos
+Tue Dec 30 06:59:32 2014  cpcrw_188.pos
+Tue Dec 30 06:59:32 2014  	Gap: 8
+Tue Dec 30 06:59:32 2014  cpcrw_189.pos
+Tue Dec 30 06:59:32 2014  cpcrw_190.pos
+Tue Dec 30 06:59:32 2014  	Gap: 37
+Tue Dec 30 06:59:32 2014  cpcrw_191.pos
+Tue Dec 30 06:59:32 2014  cpcrw_192.pos
+Tue Dec 30 06:59:32 2014  cpcrw_194.pos
+Tue Dec 30 06:59:32 2014  cpcrw_195.pos
+Tue Dec 30 06:59:32 2014  	Gap: 22
+Tue Dec 30 06:59:32 2014  cpcrw_196.pos
+Tue Dec 30 06:59:32 2014  	Gap: 8
+Tue Dec 30 06:59:32 2014  	Gap: 14
+Tue Dec 30 06:59:32 2014  	Gap: 24
+Tue Dec 30 06:59:32 2014  cpcrw_198.pos
+Tue Dec 30 06:59:32 2014  cpcrw_201.pos
+Tue Dec 30 06:59:32 2014  	Gap: 5
+Tue Dec 30 06:59:32 2014  cpcrw_202.pos
+Tue Dec 30 06:59:32 2014  cpcrw_203.pos
+Tue Dec 30 06:59:32 2014  	Gap: 7
+Tue Dec 30 06:59:32 2014  	Gap: 17
+Tue Dec 30 06:59:32 2014  	Gap: 26
+Tue Dec 30 06:59:32 2014  	Gap: 31
+Tue Dec 30 06:59:32 2014  cpcrw_204.pos
+Tue Dec 30 06:59:32 2014  cpcrw_205.pos
+Tue Dec 30 06:59:32 2014  	Gap: 7
+Tue Dec 30 06:59:32 2014  cpcrw_206.pos
+Tue Dec 30 06:59:32 2014  	Gap: 4
+Tue Dec 30 06:59:32 2014  	Gap: 6
+Tue Dec 30 06:59:32 2014  	Gap: 9
+Tue Dec 30 06:59:32 2014  	Gap: 13
+Tue Dec 30 06:59:32 2014  	Gap: 28
+Tue Dec 30 06:59:32 2014  cpcrw_207.pos
+Tue Dec 30 06:59:32 2014  	Gap: 2
+Tue Dec 30 06:59:32 2014  	Gap: 6
+Tue Dec 30 06:59:32 2014  	Gap: 10
+Tue Dec 30 06:59:32 2014  cpcrw_208.pos
+Tue Dec 30 06:59:32 2014  cpcrw_209.pos
+Tue Dec 30 06:59:32 2014  	Gap: 19
+Tue Dec 30 06:59:32 2014  cpcrw_210.pos
+Tue Dec 30 06:59:32 2014  	Gap: 3
+Tue Dec 30 06:59:32 2014  cpcrw_211.pos
+Tue Dec 30 06:59:32 2014  	Gap: 4
+Tue Dec 30 06:59:32 2014  	Gap: 7
+Tue Dec 30 06:59:32 2014  	Gap: 8
+Tue Dec 30 06:59:32 2014  cpcrw_212.pos
+Tue Dec 30 06:59:32 2014  cpcrw_213.pos
+Tue Dec 30 06:59:32 2014  cpcrw_214.pos
+Tue Dec 30 06:59:32 2014  	Gap: 8
+Tue Dec 30 06:59:32 2014  	Gap: 19
+Tue Dec 30 06:59:32 2014  cpcrw_215.pos
+Tue Dec 30 06:59:32 2014  	Gap: 6
+Tue Dec 30 06:59:32 2014  	Gap: 16
+Tue Dec 30 06:59:32 2014  	Gap: 34
+Tue Dec 30 06:59:32 2014  cpcrw_216.pos
+Tue Dec 30 06:59:32 2014  	Gap: 6
+Tue Dec 30 06:59:32 2014  cpcrw_217.pos
+Tue Dec 30 06:59:32 2014  	Gap: 8
+Tue Dec 30 06:59:32 2014  cpcrw_218.pos
+Tue Dec 30 06:59:32 2014  	Gap: 13
+Tue Dec 30 06:59:32 2014  cpcrw_219.pos
+Tue Dec 30 06:59:32 2014  	Gap: 2
+Tue Dec 30 06:59:32 2014  	Gap: 9
+Tue Dec 30 06:59:32 2014  	Gap: 35
+Tue Dec 30 06:59:32 2014  	Gap: 50
+Tue Dec 30 06:59:32 2014  cpcrw_220.pos
+Tue Dec 30 06:59:32 2014  	Gap: 8
+Tue Dec 30 06:59:32 2014  	Gap: 11
+Tue Dec 30 06:59:32 2014  	Gap: 19
+Tue Dec 30 06:59:32 2014  cpcrw_221.pos
+Tue Dec 30 06:59:32 2014  	Gap: 15
+Tue Dec 30 06:59:32 2014  	Gap: 27
+Tue Dec 30 06:59:32 2014  	Gap: 56
+Tue Dec 30 06:59:32 2014  cpcrw_222.pos
+Tue Dec 30 06:59:32 2014  	Gap: 7
+Tue Dec 30 06:59:32 2014  	Gap: 17
+Tue Dec 30 06:59:32 2014  	Gap: 25
+Tue Dec 30 06:59:32 2014  	Gap: 33
+Tue Dec 30 06:59:32 2014  	Gap: 50
+Tue Dec 30 06:59:33 2014  cpcrw_223.pos
+Tue Dec 30 06:59:33 2014  	Gap: 12
+Tue Dec 30 06:59:33 2014  	Gap: 24
+Tue Dec 30 06:59:33 2014  	Gap: 29
+Tue Dec 30 06:59:33 2014  cpcrw_224.pos
+Tue Dec 30 06:59:33 2014  	Gap: 10
+Tue Dec 30 06:59:33 2014  	Gap: 22
+Tue Dec 30 06:59:33 2014  	Gap: 27
+Tue Dec 30 06:59:33 2014  cpcrw_225.pos
+Tue Dec 30 06:59:33 2014  	Gap: 9
+Tue Dec 30 06:59:33 2014  	Gap: 21
+Tue Dec 30 06:59:33 2014  	Gap: 48
+Tue Dec 30 06:59:33 2014  	Gap: 59
+Tue Dec 30 06:59:33 2014  cpcrw_226.pos
+Tue Dec 30 06:59:33 2014  	Gap: 26
+Tue Dec 30 06:59:33 2014  	Gap: 40
+Tue Dec 30 06:59:33 2014  	Gap: 54
+Tue Dec 30 06:59:33 2014  cpcrw_227.pos
+Tue Dec 30 06:59:33 2014  	Gap: 11
+Tue Dec 30 06:59:33 2014  	Gap: 19
+Tue Dec 30 06:59:33 2014  	Gap: 25
+Tue Dec 30 06:59:33 2014  	Gap: 32
+Tue Dec 30 06:59:33 2014  cpcrw_228.pos
+Tue Dec 30 06:59:33 2014  cpcrw_229.pos
+Tue Dec 30 06:59:33 2014  cpcrw_230.pos
+Tue Dec 30 06:59:33 2014  	Gap: 12
+Tue Dec 30 06:59:33 2014  	Gap: 35
+Tue Dec 30 06:59:33 2014  	Gap: 68
+Tue Dec 30 06:59:33 2014  cpcrw_233.pos
+Tue Dec 30 06:59:33 2014  cpcrw_234.pos
+Tue Dec 30 06:59:33 2014  cpcrw_240.pos
+Tue Dec 30 06:59:33 2014  cpcrw_255.pos
+Tue Dec 30 06:59:33 2014  cpcrw_261.pos
+Tue Dec 30 06:59:33 2014  cpcrw_266.pos
+Tue Dec 30 06:59:33 2014  cpcrw_269.pos
+Tue Dec 30 06:59:33 2014  	Gap: 6
+Tue Dec 30 06:59:33 2014  	Gap: 14
+Tue Dec 30 06:59:33 2014  cpcrw_270.pos
+Tue Dec 30 06:59:33 2014  	Gap: 7
+Tue Dec 30 06:59:33 2014  	Gap: 11
+Tue Dec 30 06:59:33 2014  	Gap: 13
+Tue Dec 30 06:59:33 2014  	Gap: 16
+Tue Dec 30 06:59:33 2014  	Gap: 19
+Tue Dec 30 06:59:33 2014  	Gap: 27
+Tue Dec 30 06:59:33 2014  cpcrw_271.pos
+Tue Dec 30 06:59:33 2014  	Gap: 5
+Tue Dec 30 06:59:33 2014  	Gap: 8
+Tue Dec 30 06:59:33 2014  	Gap: 10
+Tue Dec 30 06:59:33 2014  	Gap: 11
+Tue Dec 30 06:59:33 2014  	Gap: 13
+Tue Dec 30 06:59:33 2014  	Gap: 19
+Tue Dec 30 06:59:33 2014  cpcrw_272.pos
+Tue Dec 30 06:59:33 2014  	Gap: 7
+Tue Dec 30 06:59:33 2014  	Gap: 9
+Tue Dec 30 06:59:33 2014  	Gap: 12
+Tue Dec 30 06:59:33 2014  	Gap: 14
+Tue Dec 30 06:59:33 2014  	Gap: 16
+Tue Dec 30 06:59:33 2014  cpcrw_273.pos
+Tue Dec 30 06:59:33 2014  cpcrw_274.pos
+Tue Dec 30 06:59:33 2014  	Gap: 6
+Tue Dec 30 06:59:33 2014  cpcrw_275.pos
+Tue Dec 30 06:59:33 2014  cpcrw_276.pos
+Tue Dec 30 06:59:33 2014  cpcrw_277.pos
+Tue Dec 30 06:59:33 2014  cpcrw_278.pos
+Tue Dec 30 06:59:33 2014  cpcrw_279.pos
+Tue Dec 30 06:59:33 2014  cpcrw_280.pos
+Tue Dec 30 06:59:33 2014  cpcrw_281.pos
+Tue Dec 30 06:59:33 2014  cpcrw_282.pos
+Tue Dec 30 06:59:33 2014  cpcrw_283.pos
+Tue Dec 30 06:59:33 2014  cpcrw_285.pos
+Tue Dec 30 06:59:33 2014  cpcrw_286.pos
+Tue Dec 30 06:59:33 2014  cpcrw_287.pos
+Tue Dec 30 06:59:33 2014  cpcrw_288.pos
+Tue Dec 30 06:59:33 2014  cpcrw_289.pos
+Tue Dec 30 06:59:33 2014  cpcrw_290.pos
+Tue Dec 30 06:59:33 2014  cpcrw_291.pos
+Tue Dec 30 06:59:33 2014  cpcrw_292.pos
+Tue Dec 30 06:59:33 2014  cpcrw_301.pos
+Tue Dec 30 06:59:33 2014  cpcrw_bc284.pos
+Tue Dec 30 06:59:33 2014  cpcrw_bc302.pos
+Tue Dec 30 06:59:33 2014  cpcrw_bc303.pos
+Tue Dec 30 06:59:33 2014  We are done! Melting...
+Tue Dec 30 06:59:33 2014  ringwidths rows = 9514 cols = 3
+Tue Dec 30 06:59:33 2014  Saving outputs//ringwidths.csv
+Tue Dec 30 06:59:33 2014  Reading info on good- and bad-quality scans...
+Tue Dec 30 06:59:33 2014  core_data/scans_good.txt
+Tue Dec 30 06:59:33 2014  core_data/scans_bad.txt
+Tue Dec 30 06:59:33 2014  Making diagnostic plots...
+Tue Dec 30 06:59:36 2014  Saving outputs//3-read_coodata/3-qc1.pdf
+Tue Dec 30 06:59:42 2014  Saving outputs//3-read_coodata/3-qc2.pdf
+Tue Dec 30 06:59:43 2014  6 outliers in decade 2010-2019 (out of 979 rings)
      Core Year Width_mm ScanQuality    decade label
-4645   37 2013 1.376641        <NA> 2010-2019      
-4803   40 2013 1.397631        <NA> 2010-2019      
-Sun Dec 14 19:27:19 2014  0 outliers in decade 2000-2009 (out of 1964 rings)
-Sun Dec 14 19:27:19 2014  2 outliers in decade 1990-1999 (out of 1632 rings)
+4835  226 2013 1.454486        <NA> 2010-2019      
+4836  226 2012 2.117000        <NA> 2010-2019      
+4837  226 2011 1.764000        <NA> 2010-2019      
+4838  226 2010 2.230354        <NA> 2010-2019      
+6399   37 2013 1.376641        <NA> 2010-2019      
+6557   40 2013 1.397631        <NA> 2010-2019      
+Tue Dec 30 06:59:43 2014  8 outliers in decade 2000-2009 (out of 2324 rings)
      Core Year Width_mm ScanQuality    decade label
-2470  165 1996 2.283954        Good 1990-1999      
-2471  165 1995 2.261497        Good 1990-1999      
-Sun Dec 14 19:27:19 2014  3 outliers in decade 1980-1989 (out of 1176 rings)
+4831  226 2007 1.798973        <NA> 2000-2009      
+4832  226 2006 1.764000        <NA> 2000-2009      
+4833  226 2005 1.577322        <NA> 2000-2009      
+4834  226 2004 2.117000        <NA> 2000-2009      
+4840  226 2008 1.764000        <NA> 2000-2009      
+4842  226 2002 2.117000        <NA> 2000-2009      
+4847  226 2001 2.145242        <NA> 2000-2009      
+4848  226 2000 1.764000        <NA> 2000-2009      
+Tue Dec 30 06:59:43 2014  9 outliers in decade 1990-1999 (out of 1982 rings)
+     Core Year Width_mm ScanQuality    decade label
+2463  165 1996 2.283954        Good 1990-1999      
+2470  165 1995 2.261497        Good 1990-1999      
+4849  226 1999 1.764000        <NA> 1990-1999      
+4850  226 1998 1.764000        <NA> 1990-1999      
+4867  226 1997 2.146229        <NA> 1990-1999      
+4870  226 1994 2.145078        <NA> 1990-1999      
+4871  226 1993 2.470000        <NA> 1990-1999      
+4888  226 1992 2.146065        <NA> 1990-1999      
+4889  226 1990 1.798777        <NA> 1990-1999      
+Tue Dec 30 06:59:43 2014  11 outliers in decade 1980-1989 (out of 1485 rings)
       Core Year Width_mm ScanQuality    decade      label
-5468    57 1983 2.082309        <NA> 1980-1989           
-7548 bc284 1983 3.039378        <NA> 1980-1989 bc284 1983
-7551 bc284 1980 2.111304        <NA> 1980-1989           
-Sun Dec 14 19:27:19 2014  4 outliers in decade 1970-1979 (out of 832 rings)
+4852   226 1988 2.117000        <NA> 1980-1989           
+4853   226 1987 2.822000        <NA> 1980-1989           
+4872   226 1986 3.175000        <NA> 1980-1989   226 1986
+4873   226 1985 3.528000        <NA> 1980-1989   226 1985
+4874   226 1984 2.843992        <NA> 1980-1989           
+4875   226 1983 2.495097        <NA> 1980-1989           
+4876   226 1982 3.880000        <NA> 1980-1989   226 1982
+4877   226 1981 3.175000        <NA> 1980-1989   226 1981
+4878   226 1980 3.528000        <NA> 1980-1989   226 1980
+9299 bc284 1983 3.039378        <NA> 1980-1989 bc284 1983
+9302 bc284 1980 2.111304        <NA> 1980-1989           
+Tue Dec 30 06:59:44 2014  13 outliers in decade 1970-1979 (out of 1061 rings)
       Core Year Width_mm ScanQuality    decade      label
-4439   301 1971 2.715250        Good 1970-1979           
-7592 bc284 1976 3.347626        <NA> 1970-1979 bc284 1976
-7600 bc284 1978 1.954384        <NA> 1970-1979           
-7601 bc284 1977 1.977717        <NA> 1970-1979           
-Sun Dec 14 19:27:19 2014  13 outliers in decade 1960-1969 (out of 612 rings)
+4854   226 1972 3.527000        <NA> 1970-1979   226 1972
+4855   226 1971 2.494956        <NA> 1970-1979           
+4856   226 1970 3.175000        <NA> 1970-1979   226 1970
+4879   226 1979 2.494107        <NA> 1970-1979           
+4880   226 1978 2.470000        <NA> 1970-1979           
+4881   226 1977 2.117000        <NA> 1970-1979           
+4882   226 1976 2.843992        <NA> 1970-1979           
+4883   226 1975 2.116000        <NA> 1970-1979           
+4885   226 1973 2.844861        <NA> 1970-1979           
+6193   301 1971 2.715250        Good 1970-1979           
+9304 bc284 1978 1.954384        <NA> 1970-1979           
+9305 bc284 1977 1.977717        <NA> 1970-1979           
+9306 bc284 1976 3.347626        <NA> 1970-1979 bc284 1976
+Tue Dec 30 06:59:44 2014  23 outliers in decade 1960-1969 (out of 786 rings)
       Core Year Width_mm ScanQuality    decade      label
-7567 bc284 1962 2.220860        <NA> 1960-1969           
-7568 bc284 1961 4.432418        <NA> 1960-1969 bc284 1961
-7569 bc284 1960 2.417838        <NA> 1960-1969           
-7585 bc284 1968 4.492523        <NA> 1960-1969 bc284 1968
-7586 bc284 1964 1.887746        <NA> 1960-1969           
-7587 bc284 1963 2.113843        <NA> 1960-1969           
-7628 bc302 1966 2.076740        <NA> 1960-1969           
-7629 bc302 1965 2.223625        <NA> 1960-1969           
-7630 bc302 1964 3.175291        <NA> 1960-1969 bc302 1964
-7631 bc302 1963 1.928830        <NA> 1960-1969           
-7632 bc302 1962 2.286386        <NA> 1960-1969           
-7633 bc302 1961 2.350537        <NA> 1960-1969           
-7634 bc302 1960 2.540364        <NA> 1960-1969           
-Sun Dec 14 19:27:19 2014  12 outliers in decade 1950-1959 (out of 412 rings)
+4846   226 1962 6.039407        <NA> 1960-1969   226 1962
+4857   226 1969 2.469000        <NA> 1960-1969           
+4858   226 1968 2.470000        <NA> 1960-1969           
+4859   226 1967 4.233000        <NA> 1960-1969   226 1967
+4860   226 1963 3.895934        <NA> 1960-1969   226 1963
+4861   226 1961 6.007380        <NA> 1960-1969   226 1961
+4862   226 1960 2.494107        <NA> 1960-1969           
+4865   226 1965 4.599566        <NA> 1960-1969   226 1965
+4886   226 1966 2.843992        <NA> 1960-1969           
+4887   226 1964 4.248607        <NA> 1960-1969   226 1964
+9314 bc284 1968 4.492523        <NA> 1960-1969 bc284 1968
+9318 bc284 1964 1.887746        <NA> 1960-1969           
+9319 bc284 1963 2.113843        <NA> 1960-1969           
+9320 bc284 1962 2.220860        <NA> 1960-1969           
+9321 bc284 1961 4.432418        <NA> 1960-1969 bc284 1961
+9322 bc284 1960 2.417838        <NA> 1960-1969           
+9375 bc302 1961 2.350537        <NA> 1960-1969           
+9376 bc302 1960 2.540364        <NA> 1960-1969           
+9430 bc302 1966 2.076740        <NA> 1960-1969           
+9431 bc302 1965 2.223625        <NA> 1960-1969           
+9432 bc302 1964 3.175291        <NA> 1960-1969 bc302 1964
+9433 bc302 1963 1.928830        <NA> 1960-1969           
+9434 bc302 1962 2.286386        <NA> 1960-1969           
+Tue Dec 30 06:59:44 2014  18 outliers in decade 1950-1959 (out of 526 rings)
+      Core Year  Width_mm ScanQuality    decade      label
+4843   226 1956 11.294518        <NA> 1950-1959   226 1956
+4844   226 1955 14.481220        <NA> 1950-1959   226 1955
+4845   226 1954 17.883993        <NA> 1950-1959   226 1954
+4863   226 1958  9.178752        <NA> 1950-1959   226 1958
+4864   226 1957 10.583000        <NA> 1950-1959   226 1957
+4866   226 1959  7.064775        <NA> 1950-1959   226 1959
+9323 bc284 1959  2.606335        <NA> 1950-1959           
+9324 bc284 1958  1.977353        <NA> 1950-1959           
+9328 bc284 1954  5.283781        <NA> 1950-1959 bc284 1954
+9332 bc284 1950  1.962640        <NA> 1950-1959           
+9377 bc302 1959  2.265000        <NA> 1950-1959           
+9387 bc302 1956  2.223397        <NA> 1950-1959           
+9388 bc302 1951  2.266594        <NA> 1950-1959           
+9389 bc302 1950  1.905463        <NA> 1950-1959           
+9396 bc302 1955  2.756186        <NA> 1950-1959           
+9397 bc302 1954  2.775907        <NA> 1950-1959           
+9398 bc302 1953  1.990465        <NA> 1950-1959           
+9405 bc302 1952  2.458335        <NA> 1950-1959           
+Tue Dec 30 06:59:44 2014  2 outliers in decade 1940-1949 (out of 318 rings)
       Core Year Width_mm ScanQuality    decade      label
-7570 bc284 1959 2.606335        <NA> 1950-1959           
-7572 bc284 1950 1.962640        <NA> 1950-1959           
-7594 bc284 1958 1.977353        <NA> 1950-1959           
-7597 bc284 1954 5.283781        <NA> 1950-1959 bc284 1954
-7604 bc302 1953 1.990465        <NA> 1950-1959           
-7605 bc302 1952 2.458335        <NA> 1950-1959           
-7606 bc302 1951 2.266594        <NA> 1950-1959           
-7607 bc302 1950 1.905463        <NA> 1950-1959           
-7613 bc302 1956 2.223397        <NA> 1950-1959           
-7614 bc302 1955 2.756186        <NA> 1950-1959           
-7615 bc302 1954 2.775907        <NA> 1950-1959           
-7635 bc302 1959 2.265000        <NA> 1950-1959           
-Sun Dec 14 19:27:20 2014  2 outliers in decade 1940-1949 (out of 253 rings)
+9336 bc284 1946 6.166375        <NA> 1940-1949 bc284 1946
+9392 bc302 1947 3.535000        <NA> 1940-1949 bc302 1947
+Tue Dec 30 06:59:44 2014  2 outliers in decade 1930-1939 (out of 51 rings)
       Core Year Width_mm ScanQuality    decade      label
-7554 bc284 1946 6.166375        <NA> 1940-1949 bc284 1946
-7610 bc302 1947 3.535000        <NA> 1940-1949 bc302 1947
-Sun Dec 14 19:27:20 2014  1 outliers in decade 1930-1939 (out of 40 rings)
-      Core Year Width_mm ScanQuality    decade      label
-7558 bc284 1939 8.155245        <NA> 1930-1939 bc284 1939
-Sun Dec 14 19:27:20 2014  0 outliers in decade NA-NA (out of 2 rings)
-Sun Dec 14 19:27:20 2014  Saving outputs//3-read_coodata/3-qc3.pdf
-Sun Dec 14 19:27:20 2014  All done with 3-read_coodata.R
+9343 bc284 1939 8.155245        <NA> 1930-1939 bc284 1939
+9436 bc302 1935 6.131462        <NA> 1930-1939 bc302 1935
+Tue Dec 30 06:59:44 2014  0 outliers in decade 1920-1929 (out of 2 rings)
+Tue Dec 30 06:59:44 2014  0 outliers in decade NA-NA (out of 2 rings)
+Tue Dec 30 06:59:44 2014  Saving outputs//3-read_coodata/3-qc3.pdf
+Tue Dec 30 06:59:44 2014  All done with 3-read_coodata.R
 R version 3.1.2 (2014-10-31)
 Platform: x86_64-apple-darwin10.8.0 (64-bit)
 
@@ -864,11 +1097,9 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] reshape2_1.4     magrittr_1.0.1   dplyr_0.3.0.9000 ggplot2_0.9.3.1 
+[1] reshape2_1.4    magrittr_1.0.1  ggplot2_0.9.3.1
 
 loaded via a namespace (and not attached):
- [1] assertthat_0.1.0.99 colorspace_1.2-4    DBI_0.3.1           digest_0.6.4       
- [5] grid_3.1.2          gtable_0.1.2        labeling_0.2        lazyeval_0.1.9.9001
- [9] MASS_7.3-35         munsell_0.4.2       parallel_3.1.2      plyr_1.8.1         
-[13] proto_0.3-10        R6_2.0              Rcpp_0.11.3         scales_0.2.4       
-[17] stringr_0.6.2       tools_3.1.2        
+ [1] colorspace_1.2-4 digest_0.6.4     grid_3.1.2       gtable_0.1.2     labeling_0.2    
+ [6] MASS_7.3-35      munsell_0.4.2    plyr_1.8.1       proto_0.3-10     Rcpp_0.11.3     
+[11] scales_0.2.4     stringr_0.6.2    tools_3.1.2     

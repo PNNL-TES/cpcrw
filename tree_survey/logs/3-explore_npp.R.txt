@@ -1,31 +1,31 @@
-Sun Dec 14 19:27:39 2014  Welcome to 3-explore_npp.R
-Sun Dec 14 19:27:39 2014  Opening ./outputs//npp.csv
-Sun Dec 14 19:27:39 2014  Opening ./../ald/cpcrw_ald.csv
-Sun Dec 14 19:27:39 2014  Plotting ALD...
-Sun Dec 14 19:27:40 2014  Saving outputs//3-explore_npp/2-ald.pdf
-Sun Dec 14 19:27:40 2014  Merging ALD and NPP data...
-Sun Dec 14 19:27:40 2014  Saving outputs//3-explore_npp/2-ald_vs_npp.pdf
-Sun Dec 14 19:27:41 2014  Model for ALD versus NPP...
+Tue Dec 30 07:04:05 2014  Welcome to 3-explore_npp.R
+Tue Dec 30 07:04:05 2014  Opening ./outputs//npp.csv
+Tue Dec 30 07:04:05 2014  Opening ./../ald/cpcrw_ald.csv
+Tue Dec 30 07:04:05 2014  Plotting ALD...
+Tue Dec 30 07:04:05 2014  Saving outputs//3-explore_npp/2-ald.pdf
+Tue Dec 30 07:04:05 2014  Merging ALD and NPP data...
+Tue Dec 30 07:04:06 2014  Saving outputs//3-explore_npp/2-ald_vs_npp.pdf
+Tue Dec 30 07:04:06 2014  Model for ALD versus NPP...
 
 Call:
 lm(formula = npp_gC ~ Depth_cm, data = d)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--220.04  -82.94  -11.82   53.28  358.90 
+-196.84  -76.74  -15.85   55.64  257.50 
 
 Coefficients:
-             Estimate Std. Error t value Pr(>|t|)    
-(Intercept) -109.2986    54.6830  -1.999   0.0516 .  
-Depth_cm       2.3850     0.4995   4.774 1.87e-05 ***
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -74.8828    46.6545  -1.605    0.115    
+Depth_cm      1.9645     0.4262   4.609 3.22e-05 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 119.4 on 46 degrees of freedom
-Multiple R-squared:  0.3313,	Adjusted R-squared:  0.3168 
-F-statistic: 22.79 on 1 and 46 DF,  p-value: 1.867e-05
+Residual standard error: 101.9 on 46 degrees of freedom
+Multiple R-squared:  0.3159,	Adjusted R-squared:  0.3011 
+F-statistic: 21.25 on 1 and 46 DF,  p-value: 3.22e-05
 
-Sun Dec 14 19:27:41 2014  All done with 3-explore_npp.R
+Tue Dec 30 07:04:06 2014  All done with 3-explore_npp.R
 R version 3.1.2 (2014-10-31)
 Platform: x86_64-apple-darwin10.8.0 (64-bit)
 
@@ -36,11 +36,11 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] reshape2_1.4     magrittr_1.0.1   dplyr_0.3.0.9000 ggplot2_0.9.3.1 
+[1] magrittr_1.0.1   dplyr_0.3.0.9000 ggplot2_0.9.3.1 
 
 loaded via a namespace (and not attached):
  [1] assertthat_0.1.0.99 colorspace_1.2-4    DBI_0.3.1           digest_0.6.4       
  [5] grid_3.1.2          gtable_0.1.2        labeling_0.2        lazyeval_0.1.9.9001
  [9] MASS_7.3-35         munsell_0.4.2       parallel_3.1.2      plyr_1.8.1         
-[13] proto_0.3-10        R6_2.0              Rcpp_0.11.3         scales_0.2.4       
+[13] proto_0.3-10        Rcpp_0.11.3         reshape2_1.4        scales_0.2.4       
 [17] stringr_0.6.2       tools_3.1.2        
