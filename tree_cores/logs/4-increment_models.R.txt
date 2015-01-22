@@ -1,21 +1,22 @@
-Tue Dec 30 07:00:23 2014  Welcome to 4-increment_models.R
-Tue Dec 30 07:00:24 2014  Opening ./outputs/ringwidths.csv
-Tue Dec 30 07:00:24 2014  Opening ./tree_cores.csv
-Tue Dec 30 07:00:24 2014  Unique cores in ring width data = 245
-Tue Dec 30 07:00:24 2014  Unique cores in coring data = 276
-Tue Dec 30 07:00:24 2014  Cores in ring width data but not in coring data:
+Thu Jan 22 13:06:46 2015  Welcome to 4-increment_models.R
+Thu Jan 22 13:06:47 2015  Opening ./outputs/ringwidths.csv
+Thu Jan 22 13:06:47 2015  Opening ./tree_cores.csv
+Thu Jan 22 13:06:47 2015  Unique cores in ring width data = 245
+Thu Jan 22 13:06:47 2015  Unique cores in coring data = 276
+Thu Jan 22 13:06:47 2015  Cores in ring width data but not in coring data:
 character(0)
-Tue Dec 30 07:00:24 2014  Cores in coring data but not in ring width data:
+Thu Jan 22 13:06:47 2015  Cores in coring data but not in ring width data:
  [1] "bc107" "bc163" "193"   "197"   "bc210" "231"   "232"   "235"   "236"   "237"  
 [11] "238"   "239"   "241"   "242"   "243"   "244"   "251"   "252"   "253"   "254"  
 [21] "256"   "257"   "258"   "259"   "260"   "262"   "263"   "264"   "265"   "267"  
 [31] "268"  
-Tue Dec 30 07:00:24 2014  Merging...
-Tue Dec 30 07:00:24 2014  Diagnostic plot...
-Tue Dec 30 07:00:24 2014  Saving outputs//4-increment_models/4-treecounts.pdf
-Tue Dec 30 07:00:24 2014  Excluding data before 2008
-Tue Dec 30 07:00:24 2014  Saving outputs//increment_models.csv
-Tue Dec 30 07:00:24 2014  All done with 4-increment_models.R
+Thu Jan 22 13:06:47 2015  Merging...
+Thu Jan 22 13:06:47 2015  Saving outputs//coredata_merged.csv
+Thu Jan 22 13:06:47 2015  Diagnostic plot...
+Thu Jan 22 13:06:49 2015  Saving outputs//4-increment_models/4-treecounts.pdf
+Thu Jan 22 13:06:50 2015  Excluding data before 2008
+Thu Jan 22 13:06:51 2015  Saving outputs//increment_models.csv
+Thu Jan 22 13:06:51 2015  All done with 4-increment_models.R
 R version 3.1.2 (2014-10-31)
 Platform: x86_64-apple-darwin10.8.0 (64-bit)
 
@@ -26,11 +27,11 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_0.3.0.9000 reshape2_1.4     magrittr_1.0.1   ggplot2_0.9.3.1 
+[1] magrittr_1.5  dplyr_0.4.1   ggplot2_1.0.0
 
 loaded via a namespace (and not attached):
  [1] assertthat_0.1.0.99 colorspace_1.2-4    DBI_0.3.1           digest_0.6.4       
- [5] grid_3.1.2          gtable_0.1.2        labeling_0.2        lazyeval_0.1.9.9001
+ [5] grid_3.1.2          gtable_0.1.2        labeling_0.2        lazyeval_0.1.10    
  [9] MASS_7.3-35         munsell_0.4.2       parallel_3.1.2      plyr_1.8.1         
-[13] proto_0.3-10        R6_2.0              Rcpp_0.11.3         scales_0.2.4       
-[17] stringr_0.6.2       tools_3.1.2        
+[13] proto_0.3-10        R6_2.0              Rcpp_0.11.3         reshape2_1.4       
+[17] scales_0.2.4        stringr_0.6.2       tools_3.1.2        

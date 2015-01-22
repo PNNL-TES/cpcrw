@@ -43,6 +43,9 @@ print(setdiff(coredata$Core, ringwidths$Core))
 printlog("Merging...")
 d <- merge(coredata, ringwidths, by="Core")
 
+coredata_merged <- d
+savedata(coredata_merged, scriptfolder=FALSE)
+
 printlog("Diagnostic plot...")
 trees <- d %>% 
     group_by(Transect, Position_m) %>% 
