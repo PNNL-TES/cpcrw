@@ -70,12 +70,13 @@ savedata(npp, scriptfolder=FALSE)
 printlog("Plotting...")
 
 p1 <- ggplot(npp, aes(Transect, Position_m)) + geom_tile(aes(fill=npp_gC))
-p1 <- p1 + ylab("Transect Position_m (m)") + xlab("Transect")
+p1 <- p1 + ylab("Transect position (m)") + xlab("Transect")
+p1 <- p1 + scale_fill_continuous("NPP (gC/m2/yr)")
 print(p1)
 saveplot("npp1")
 
 p2 <- ggplot(npp, aes(factor(Position_m), npp_gC)) + geom_boxplot()
-p2 <- p2 + xlab("Transect Position_m (m)") + ylab("NPP (gC/m2/yr)")
+p2 <- p2 + xlab("Transect position (m)") + ylab("NPP (gC/m2/yr)")
 print(p2)
 saveplot("npp2")
 
@@ -96,7 +97,7 @@ npp_species <- npp_species %>%
     summarise(npp_gC=mean(npp_gC))
 
 p3 <- ggplot(npp_species, aes(factor(Position_m), npp_gC, fill=Species, group=Species)) + geom_bar(stat='identity')
-p3 <- p3 + xlab("Transect Position_m (m)") + ylab("NPP (gC/m2/yr)")
+p3 <- p3 + xlab("Transect position (m)") + ylab("NPP (gC/m2/yr)")
 print(p3)
 saveplot("npp3")
 

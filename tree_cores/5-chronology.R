@@ -2,6 +2,8 @@
 #  - read in merged tree ring/plot/core dataset
 #  - compute chronology, errors, make figures
 
+# TODO: crossdating
+
 # Ben Bond-Lamberty January 2015
 
 # Support functions and common definitions

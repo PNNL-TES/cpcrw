@@ -1,13 +1,13 @@
-Tue Dec 30 07:03:48 2014  Welcome to 2-npp.R
-Tue Dec 30 07:03:48 2014  Opening ./../tree_cores/outputs/increment_models.csv
-Tue Dec 30 07:03:48 2014  Opening ./tree_survey.csv
-Tue Dec 30 07:03:48 2014  tree_survey rows = 955 cols = 7
-Tue Dec 30 07:03:48 2014  Eliminating dead trees...
-Tue Dec 30 07:03:48 2014  tree_survey rows = 921 cols = 6
-Tue Dec 30 07:03:48 2014  Merging tree survey data with increment models from coring...
-Tue Dec 30 07:03:48 2014  Computing increments...
-Tue Dec 30 07:03:48 2014  Computing biomass...
-Tue Dec 30 07:03:48 2014  Computing NPP...
+Thu Jan 22 14:58:20 2015  Welcome to 2-npp.R
+Thu Jan 22 14:58:20 2015  Opening ./../tree_cores/outputs/increment_models.csv
+Thu Jan 22 14:58:23 2015  Opening ./tree_survey.csv
+Thu Jan 22 14:58:24 2015  tree_survey rows = 955 cols = 7
+Thu Jan 22 14:58:24 2015  Eliminating dead trees...
+Thu Jan 22 14:58:24 2015  tree_survey rows = 921 cols = 6
+Thu Jan 22 14:58:24 2015  Merging tree survey data with increment models from coring...
+Thu Jan 22 14:58:24 2015  Computing increments...
+Thu Jan 22 14:58:24 2015  Computing biomass...
+Thu Jan 22 14:58:24 2015  Computing NPP...
  Transect   Position_m       npp_gC      
  T5  :8   Min.   : 0.0   Min.   :  0.00  
  T6  :8   1st Qu.:17.5   1st Qu.: 32.32  
@@ -16,13 +16,13 @@ Tue Dec 30 07:03:48 2014  Computing NPP...
  T9  :8   3rd Qu.:52.5   3rd Qu.:186.72  
  T10 :8   Max.   :70.0   Max.   :407.43  
  NA's:1   NA's   :1                      
-Tue Dec 30 07:03:48 2014  Saving outputs//npp.csv
-Tue Dec 30 07:03:48 2014  Plotting...
-Tue Dec 30 07:03:48 2014  Saving outputs//2-npp/npp1.pdf
-Tue Dec 30 07:03:49 2014  Saving outputs//2-npp/npp2.pdf
-Tue Dec 30 07:03:49 2014  Doing species-specific plots...
-Tue Dec 30 07:03:49 2014  Saving outputs//2-npp/npp3.pdf
-Tue Dec 30 07:03:50 2014  All done with 2-npp.R
+Thu Jan 22 14:58:24 2015  Saving outputs//npp.csv
+Thu Jan 22 14:58:25 2015  Plotting...
+Thu Jan 22 14:58:28 2015  Saving outputs//2-npp/npp1.pdf
+Thu Jan 22 14:58:34 2015  Saving outputs//2-npp/npp2.pdf
+Thu Jan 22 14:58:35 2015  Doing species-specific plots...
+Thu Jan 22 14:58:39 2015  Saving outputs//2-npp/npp3.pdf
+Thu Jan 22 14:58:39 2015  All done with 2-npp.R
 R version 3.1.2 (2014-10-31)
 Platform: x86_64-apple-darwin10.8.0 (64-bit)
 
@@ -33,11 +33,13 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] magrittr_1.0.1   dplyr_0.3.0.9000 ggplot2_0.9.3.1 
+[1] reshape2_1.4  dplR_1.6.2    magrittr_1.5  dplyr_0.4.1   ggplot2_1.0.0
 
 loaded via a namespace (and not attached):
- [1] assertthat_0.1.0.99 colorspace_1.2-4    DBI_0.3.1           digest_0.6.4       
- [5] grid_3.1.2          gtable_0.1.2        labeling_0.2        lazyeval_0.1.9.9001
- [9] MASS_7.3-35         munsell_0.4.2       parallel_3.1.2      plyr_1.8.1         
-[13] proto_0.3-10        Rcpp_0.11.3         reshape2_1.4        scales_0.2.4       
-[17] stringr_0.6.2       tools_3.1.2        
+ [1] assertthat_0.1.0.99 codetools_0.2-10    colorspace_1.2-4    compiler_3.1.2     
+ [5] DBI_0.3.1           digest_0.6.4        foreach_1.4.2       gmp_0.5-12         
+ [9] grid_3.1.2          gtable_0.1.2        iterators_1.0.7     labeling_0.2       
+[13] lattice_0.20-29     lazyeval_0.1.10     MASS_7.3-35         munsell_0.4.2      
+[17] parallel_3.1.2      plyr_1.8.1          png_0.1-7           proto_0.3-10       
+[21] R6_2.0              Rcpp_0.11.3         scales_0.2.4        stringi_0.4-1      
+[25] stringr_0.6.2       tools_3.1.2         XML_3.98-1.1       
