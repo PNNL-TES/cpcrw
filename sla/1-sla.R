@@ -13,19 +13,31 @@ SLA_DATA          <- "26Aug2014_SLA.csv"
 
 TREE_SURVEY         <- "tree_survey.csv"
 ALD_DATA          <- "../ald/cpcrw_ald.csv"
+LAI_DATA     <- "../tree_survey/outputs/npp.csv"
+
+library(dplyr)
 
 # ==============================================================================
 # Main
 
-sink(paste(LOG_DIR, paste0(SCRIPTNAME, ".txt"), sep="/"), split=T)
+#sink(paste(LOG_DIR, paste0(SCRIPTNAME, ".txt"), sep="/"), split=T)
 
 printlog("Welcome to", SCRIPTNAME)
 
 # Load SLA, ALD, and LAI datasets
 sla <- read_csv(SLA_DATA)
+sla$Transect <- "T5"
 printdims(sla)
 ald <- read_csv(ALD_DATA)
 printdims(ald)
+lai <- read_csv(LAI_DATA)
+printdims(lai)
+
+# Deal with ">150" values in ALD data
+printlog("Assuming ALD values with '>' are 10% greater than max...")
+greaterthans <- grepl(">", ald$Depth_cm)
+ald$Depth_cm[greaterthans] <- as.numeric(gsub(">","",ald$Depth_cm[greaterthans])) *1.1
+ald$Depth_cm <- as.numeric(ald$Depth_cm)
 
 # Compute SLA, using projected leaf area (PLA) to hemisurface leaf
 # area (HSLA) conversion based on Bond-Lamberty et al. (2003) values
@@ -42,10 +54,10 @@ p <- p + ylab(expression(SLA~(cm^2~g^{-1})))
 print(p)
 saveplot("sla")
 
+# To do: expolate / summarize ALD and LAI data as necessary
 
-# TODO: what transect did they measure SLA on? Find out.
-# TODO: compute LAI, load it here, merge
-
+printlog("Merging SLA data with LAI and ALD...")
+sla_merged <- sla %>% merge(ald) %>% merge(lai)
 
 printlog("All done with", SCRIPTNAME)
 print(sessionInfo())
