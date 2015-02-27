@@ -1,0 +1,25 @@
+Thu Feb 26 20:25:43 2015  Welcome to 1-sla.R
+Thu Feb 26 20:25:43 2015  Opening ./26Aug2014_SLA.csv
+Thu Feb 26 20:25:44 2015  sla rows = 161 cols = 10
+Thu Feb 26 20:25:44 2015  Opening ./../ald/cpcrw_ald.csv
+Thu Feb 26 20:25:48 2015  ald rows = 214 cols = 5
+Thu Feb 26 20:25:48 2015  Calculating SLA...
+Thu Feb 26 20:25:52 2015  Saving outputs//1-sla/sla.pdf
+Thu Feb 26 20:25:53 2015  All done with 1-sla.R
+R version 3.1.2 (2014-10-31)
+Platform: x86_64-apple-darwin10.8.0 (64-bit)
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] ggplot2_1.0.0
+
+loaded via a namespace (and not attached):
+ [1] colorspace_1.2-4 digest_0.6.4     grid_3.1.2       gtable_0.1.2    
+ [5] labeling_0.2     MASS_7.3-35      munsell_0.4.2    plyr_1.8.1      
+ [9] proto_0.3-10     Rcpp_0.11.3      reshape2_1.4     scales_0.2.4    
+[13] stringr_0.6.2    tools_3.1.2     
