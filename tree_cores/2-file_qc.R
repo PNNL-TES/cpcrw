@@ -16,16 +16,21 @@ IMAGE_DIR       <- "core_images/"
 DATA_DIR        <- "core_data/"
 COREDATA_FILE   <- "tree_cores.csv"
 
+# -----------------------------------------------------------------------------
+# Packages and reproducibility
+
+library(checkpoint)  # version 0.3.8
+checkpoint("2015-02-27")
+library(magrittr)
+library(ggplot2)
+theme_set(theme_bw())
+
 # ==============================================================================
 # Main
 
 sink(paste(LOG_DIR, paste0(SCRIPTNAME, ".txt"), sep="/"), split=T)
 
 printlog("Welcome to", SCRIPTNAME)
-
-library(ggplot2)
-theme_set(theme_bw())
-library(magrittr)  # for the pipe %>% operator
 
 printlog("Reading image list...")
 imagelist <- list.files(pattern="*.jpg", path=IMAGE_DIR)

@@ -20,8 +20,6 @@ sink(paste(LOG_DIR, paste0(SCRIPTNAME, ".txt"), sep="/"), split=T)
 
 printlog("Welcome to", SCRIPTNAME)
 
-library(ggplot2)
-theme_set(theme_bw())
 library(dplyr)  # 0.4
 library(magrittr)
 library(reshape2)
@@ -59,7 +57,7 @@ rwl_chron$Year <- rwl$Year
 
 printlog("Merging chronology with variability from r.s.s...")
 chronology <- merge(rwl_chron, variability)
-savedata(chronology)
+save_data(chronology)
 
 printlog("Plotting...")
 p <- ggplot(chronology, aes(Year, xxxstd)) + geom_line()
@@ -70,10 +68,10 @@ p <- p + ylab("Detrended ring-width increment (mm)")
 p <- p + scale_size_continuous("Cores")
 p <- p + coord_cartesian(xlim=c(1935, 2015), ylim=c(0.7, 1.3))
 print(p)
-saveplot("chronology")
+save_plot("chronology")
 
 print(p + coord_cartesian(xlim=c(2000, 2013.5), ylim=c(0.85, 1.15)))
-saveplot("chronology-recent")
+save_plot("chronology-recent")
 
 printlog("All done with", SCRIPTNAME)
 print(sessionInfo())

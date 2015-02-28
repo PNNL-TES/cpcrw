@@ -11,17 +11,21 @@ SCRIPTNAME        <- "1-collars.R"
 COLLAR_DATA       <- "CPCRW_2014_collar_positions.csv"
 TRANSECT_DATA       <- "CPCRW_2014_Transect_Positions.csv"
 
+# -----------------------------------------------------------------------------
+# Packages and reproducibility
+
+library(checkpoint)  # version 0.3.8
+checkpoint("2015-02-27")
+library(dplyr)
+library(ggplot2)
+theme_set(theme_bw())
+
 # ==============================================================================
 # Main
 
 sink(paste(LOG_DIR, paste0(SCRIPTNAME, ".txt"), sep="/"), split=T)
 
 printlog("Welcome to", SCRIPTNAME)
-
-library(ggplot2)
-theme_set(theme_bw())
-library(dplyr) # 0.4
-library(magrittr)
 
 cdata <- read_csv(COLLAR_DATA)
 printdims(cdata)
@@ -35,7 +39,7 @@ collarmap <- expand.grid(Transect=tdata$Transect, Collar=unique(cdata$Collar))
 collarmap <- merge(merge(collarmap, cdata), tdata)
 collarmap$MainCollar <- collarmap$Position_m %in% c(0, 4, 12, 20, 24, 32, 40, 44, 52, 60, 64, 72)
 
-savedata(collarmap, scriptfolder=FALSE)
+save_data(collarmap, scriptfolder=FALSE)
 
 
 
@@ -49,7 +53,7 @@ p <- p + annotate(geom="rect", ymin=-10, ymax=85, xmin=t1, xmax=t2, alpha=0.2)
 p <- p + annotate(geom="rect", ymin=-10, ymax=85, xmin=t2, xmax=85, alpha=0.3)
 p <- p + coord_equal(xlim=c(-5, 75), ylim=c(-5, 75))
 print(p)
-saveplot("collarmap", scriptfolder=FALSE)
+save_plot("collarmap", scriptfolder=FALSE)
 
 printlog("All done with", SCRIPTNAME)
 print(sessionInfo())

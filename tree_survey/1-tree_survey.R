@@ -7,10 +7,17 @@
 # Support functions and common definitions
 source("../0-functions.R")
 
-SCRIPTNAME        <- "1-tree_survey.R"
+SCRIPTNAME      <- "1-tree_survey.R"
 
-TREE_SURVEY         <- "tree_survey.csv"
+TREE_SURVEY     <- "tree_survey.csv"
 
+# -----------------------------------------------------------------------------
+# Packages and reproducibility
+
+library(checkpoint)  # version 0.3.8
+checkpoint("2015-02-27")
+library(ggplot2)
+theme_set(theme_bw())
 
 # ==============================================================================
 # Main
@@ -45,13 +52,11 @@ names(d1) <- c("Transect","Position_m","Basal area (m2/ha)","Density (/ha)","Bla
 
 d2 <- melt(d1, id.vars=c(1:2))
 
-library(ggplot2)
-theme_set(theme_bw())
 p <- qplot(Position_m, value, data=d2, color=Transect)+geom_smooth(method='lm', fill=NA) +
     facet_grid(variable~., scales="free")
 p <- p + geom_smooth(group=1, color='darkgrey', method='lm')
 print(p)
-saveplot("vegsurvey1")
+save_plot("vegsurvey1")
 
 #tpos <- data.frame(Transect=levels(d2$Transect),TPosition=c(0,8,28,40,48,68))
 #d2 <- merge(d, tpos)

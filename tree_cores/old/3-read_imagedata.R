@@ -64,13 +64,13 @@ p1 <- ggplot(results, aes(Year, Width_mm, color=Core)) +
     geom_point() +
     geom_text(aes(label=label), size=3, vjust=-1)
 print(p1)
-saveplot("2-imagedata_qc1")
+save_plot("2-imagedata_qc1")
 
 p2 <- ggplot(results, aes(decade, Width_mm)) + 
     geom_boxplot() + 
     geom_text(aes(label=label), size=3, vjust=-1)
 print(p2)
-saveplot("2-imagedata_qc2")
+save_plot("2-imagedata_qc2")
 
 for(d in unique(results$decade)) {
     r <- results[results$decade==d,]
@@ -81,7 +81,7 @@ for(d in unique(results$decade)) {
 
 ringwidths <- results
 ringwidths$decade <- ringwidths$label <- NULL
-savedata(ringwidths)
+save_data(ringwidths)
 
 printlog("All done with", SCRIPTNAME)
 print(sessionInfo())

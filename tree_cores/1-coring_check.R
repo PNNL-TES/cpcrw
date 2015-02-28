@@ -6,6 +6,17 @@ source("../0-functions.R")
 
 SCRIPTNAME		<- "1-coring_check.R"
 
+# -----------------------------------------------------------------------------
+# Packages and reproducibility
+
+library(checkpoint)  # version 0.3.8
+checkpoint("2015-02-27")
+library(reshape2)
+library(plyr)
+library(lubridate)
+library(ggplot2)
+theme_set(theme_bw())
+
 # ==============================================================================
 # Main
 
@@ -13,11 +24,6 @@ sink( paste( LOG_DIR, paste0( SCRIPTNAME, ".txt" ), sep="/" ), split=T )
 
 printlog( "Welcome to", SCRIPTNAME )
 
-library(ggplot2)
-theme_set( theme_bw() )
-library(reshape)
-library(plyr)
-library(lubridate)
 
 # ----- Main script goes here...
 

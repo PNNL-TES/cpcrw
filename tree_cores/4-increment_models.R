@@ -15,17 +15,21 @@ RINGWIDTHDATA     <- "outputs/ringwidths.csv"
 COREDATA          <- "tree_cores.csv"
 MINYEAR           <- 2008
 
+# -----------------------------------------------------------------------------
+# Packages and reproducibility
+
+library(checkpoint)  # version 0.3.8
+checkpoint("2015-02-27")
+library(dplyr)
+library(ggplot2)
+theme_set(theme_bw())
+
 # ==============================================================================
 # Main
 
 sink(paste(LOG_DIR, paste0(SCRIPTNAME, ".txt"), sep="/"), split=T)
 
 printlog("Welcome to", SCRIPTNAME)
-
-library(ggplot2)
-theme_set(theme_bw())
-library(dplyr)
-library(magrittr)
 
 ringwidths <- read_csv(RINGWIDTHDATA)
 coredata <- read_csv(COREDATA)
@@ -44,7 +48,7 @@ printlog("Merging...")
 d <- merge(coredata, ringwidths, by="Core")
 
 coredata_merged <- d
-savedata(coredata_merged, scriptfolder=FALSE)
+save_data(coredata_merged, scriptfolder=FALSE)
 
 printlog("Diagnostic plot...")
 trees <- d %>% 
@@ -55,7 +59,7 @@ trees$Transect <- factor(trees$Transect, levels=c("T5", "T6", "T7", "T8", "T9", 
 p1 <- qplot(Transect, Position_m, label=paste0(n, "/", ringcount), geom="text", data=trees)
 p1 <- p1 + ggtitle("Number of trees/rings processed")
 print(p1)
-saveplot("4-treecounts")
+save_plot("4-treecounts")
 
 
 # Fit linear models relating ring width (mm) to DBH (cm) by species,
@@ -84,7 +88,7 @@ increment_models <- summarise(models,
                            b=coef(mod)[2]
 )
 
-savedata(increment_models, scriptfolder=FALSE)
+save_data(increment_models, scriptfolder=FALSE)
 
 printlog("All done with", SCRIPTNAME)
 print(sessionInfo())

@@ -7,6 +7,7 @@ LOG_DIR			<- "logs/"
 
 SEPARATOR		<- "-------------------"
 
+
 # -----------------------------------------------------------------------------
 # Time-stamped output function
 printlog <- function(msg="", ..., ts=TRUE, cr=TRUE) {
@@ -43,19 +44,19 @@ outputdir <- function(scriptfolder=TRUE) {
 
 # -----------------------------------------------------------------------------
 # Save a ggplot figure
-saveplot <- function(pname, p=last_plot(), ptype=".pdf", scriptfolder=TRUE) {
+save_plot <- function(pname, p=last_plot(), ptype=".pdf", scriptfolder=TRUE) {
 	fn <- paste0(outputdir(scriptfolder), "/", pname, ptype)
 	printlog("Saving", fn)
 	ggsave(fn, p)
-} # saveplot
+} # save_plot
 
 # -----------------------------------------------------------------------------
 # Save a data frame
-savedata <- function(df, extension=".csv", scriptfolder=TRUE) {
+save_data <- function(df, extension=".csv", scriptfolder=TRUE) {
     fn <- paste0(outputdir(scriptfolder), "/", deparse(substitute(df)), extension)
 	printlog("Saving", fn)
 	write.csv(df, fn, row.names=F)
-} # saveplot
+} # save_data
 
 # -----------------------------------------------------------------------------
 # Open a netCDF file and return handle
@@ -69,7 +70,7 @@ open_ncdf <- function(fn, datadir=".") {
 # -----------------------------------------------------------------------------
 # Open a csv file and return data
 read_csv <- function(fn, datadir=".", ...) {
-	fqfn <- paste(datadir, fn, sep="/")
+	fqfn <- file.path(datadir, fn)
 	printlog("Opening", fqfn)
 	stopifnot(file.exists(fqfn))
 	read.csv(fqfn, stringsAsFactors=F, ...)
@@ -101,7 +102,3 @@ if( !file.exists( LOG_DIR)) {
     printlog("Creating", LOG_DIR)
     dir.create(LOG_DIR)
 }
-
-
-library(ggplot2)
-theme_set(theme_bw())

@@ -14,17 +14,21 @@ SCRIPTNAME        <- "3-explore_npp.R"
 NPP_DATA            <- paste(OUTPUT_DIR, "npp.csv", sep="/")
 ALD_DATA            <- "../ald/cpcrw_ald.csv"
 
+# -----------------------------------------------------------------------------
+# Packages and reproducibility
+
+library(checkpoint)  # version 0.3.8
+checkpoint("2015-02-27")
+library(dplyr)
+library(ggplot2)
+theme_set(theme_bw())
+
 # ==============================================================================
 # Main
 
 sink(paste(LOG_DIR, paste0(SCRIPTNAME, ".txt"), sep="/"), split=T)
 
 printlog("Welcome to", SCRIPTNAME)
-
-library(ggplot2)
-theme_set(theme_bw())
-library(dplyr)
-library(magrittr)
 
 npp <- read_csv(NPP_DATA)
 ald_original <- read_csv(ALD_DATA)
@@ -35,19 +39,19 @@ ald_original$Transect <- factor(ald_original$Transect, levels=c("T5", "T6", "T7"
 ald <- ald_original %>%
     group_by(Transect, Position_m) %>%
     summarise(Depth_cm=mean(Depth_cm))
-savedata(ald)
+save_data(ald)
 
 printlog("Plotting ALD...")
 p1 <- ggplot(ald, aes(Transect, Position_m)) + geom_tile(aes(fill=Depth_cm))
 p1 <- p1 + ylab("Transect position (m)") + xlab("Transect")
 print(p1)
-saveplot("ald1")
+save_plot("ald1")
 
 printlog("Summarizing ALD by transect position...")
 ald2 <- na.omit(ald_original) %>%
     group_by(Position_m) %>%
     summarise(mean=mean(Depth_cm), min=min(Depth_cm), max=max(Depth_cm), sd=sd(Depth_cm))
-savedata(ald2)
+save_data(ald2)
 
 p1a <- ggplot(ald2, aes(Position_m, mean)) + geom_line()
 p1a <- p1a + geom_ribbon(aes(ymin=min, ymax=max), alpha=0.2)
@@ -55,7 +59,7 @@ p1a <- p1a + geom_ribbon(aes(ymin=mean-sd, ymax=mean+sd), alpha=0.5)
 p1a <- p1a + xlab("Transect position (m)") + ylab("Maximum ALD (cm)")
 p1a <- p1a + geom_hline(yintercept=150, linetype=2)
 print(p1a)
-saveplot("ald2")
+save_plot("ald2")
 
 npp_summary <- na.omit(npp) %>%
     group_by(Position_m) %>%
@@ -68,7 +72,7 @@ d <- merge(npp, ald)
 p2 <- ggplot(d, aes(Depth_cm, npp_gC)) + geom_point() + geom_smooth()
 p2 <- p2 + xlab("ALD (cm)") + ylab("NPP (gC/m2/yr)")
 print(p2)
-saveplot("ald_vs_npp")
+save_plot("ald_vs_npp")
 
 printlog("Model for ALD versus NPP...")
 m1 <- lm(npp_gC ~ Depth_cm, data=d)

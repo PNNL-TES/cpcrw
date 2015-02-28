@@ -11,6 +11,15 @@ SCRIPTNAME    	<- "3-read_coodata.R"
 GOODSCANS       <- paste0(DATA_DIR, "scans_good.txt")
 BADSCANS       <- paste0(DATA_DIR, "scans_bad.txt")
 
+# -----------------------------------------------------------------------------
+# Packages and reproducibility
+
+library(checkpoint)  # version 0.3.8
+checkpoint("2015-02-27")
+library(reshape2)
+library(magrittr)
+library(ggplot2)
+theme_set(theme_bw())
 
 # -----------------------------------------------------------------------------
 # Scan a read-in *.pos file and extract date (if supplied)
@@ -31,11 +40,6 @@ determine_lastyear <- function(d)
 sink(paste(LOG_DIR, paste0(SCRIPTNAME, ".txt"), sep="/"), split=T)
 
 printlog("Welcome to", SCRIPTNAME)
-
-library(ggplot2)
-theme_set(theme_bw())
-library(reshape2)
-library(magrittr)
 
 # Read in CooRecorder data files, compute ring increments, and write out a data frame
 printlog("Welcome to coodata.R")
@@ -111,7 +115,7 @@ ringwidths$Core <- ringwidths$Core %>%
     sub("^0*", "", .)  # remove leading zeros (zeroes?) from core number
 
 printdims(ringwidths)
-savedata(ringwidths, scriptfolder=FALSE)
+save_data(ringwidths, scriptfolder=FALSE)
 
 printlog("Reading info on good- and bad-quality scans...")
 printlog(GOODSCANS)
@@ -128,7 +132,7 @@ printlog("Making diagnostic plots...")
 
 p1 <- qplot(Year, Width_mm, color=Core, data=ringwidths)
 print(p1)
-saveplot("3-qc1")
+save_plot("3-qc1")
 
 ringwidths$decade <- floor(ringwidths$Year / 10) * 10
 ringwidths$decade <- paste0(ringwidths$decade, "-", ringwidths$decade + 9)
@@ -140,7 +144,7 @@ p2 <- ggplot(ringwidths, aes(decade, Width_mm)) +
     geom_boxplot() + 
     geom_text(aes(label=label), size=3, vjust=-1)
 print(p2)
-saveplot("3-qc2")
+save_plot("3-qc2")
 
 for(d in unique(ringwidths$decade)) {
     r <- ringwidths[ringwidths$decade==d,]
@@ -152,7 +156,7 @@ for(d in unique(ringwidths$decade)) {
 p3 <- ggplot(ringwidths[!is.na(ringwidths$ScanQuality),], aes(Year, Width_mm, color=ScanQuality, group=Core)) + 
     geom_line()
 print(p3)
-saveplot("3-qc3")
+save_plot("3-qc3")
 
 
 printlog("All done with", SCRIPTNAME)
