@@ -1,22 +1,22 @@
-Tue Dec 30 06:58:11 2014  Welcome to 2-file_qc.R
-Tue Dec 30 06:58:14 2014  Reading image list...
-Tue Dec 30 06:58:14 2014  Reading data list...
-Tue Dec 30 06:58:14 2014  Reading tree core list...
-Tue Dec 30 06:58:14 2014  276 cores listed in tree_cores.csv
-Tue Dec 30 06:58:14 2014  269 image files found in core_images/
-Tue Dec 30 06:58:14 2014  245 data files found in core_data/
-Tue Dec 30 06:58:14 2014  269 cores with images
-Tue Dec 30 06:58:14 2014  245 cores with data
-Tue Dec 30 06:58:14 2014  269 images with data
-Tue Dec 30 06:58:14 2014  7 cores without images
+Sat Feb 28 05:53:27 2015  Welcome to 2-file_qc.R
+Sat Feb 28 05:53:27 2015  Reading image list...
+Sat Feb 28 05:53:27 2015  Reading data list...
+Sat Feb 28 05:53:27 2015  Reading tree core list...
+Sat Feb 28 05:53:27 2015  276 cores listed in tree_cores.csv
+Sat Feb 28 05:53:27 2015  269 image files found in core_images/
+Sat Feb 28 05:53:27 2015  269 data files found in core_data/
+Sat Feb 28 05:53:27 2015  269 cores with images
+Sat Feb 28 05:53:27 2015  269 cores with data
+Sat Feb 28 05:53:27 2015  269 images with data
+Sat Feb 28 05:53:27 2015  7 cores without images
 [1] "193" "197" "239" "244" "254" "260" "267"
-Tue Dec 30 06:58:14 2014  0 images without cores
-Tue Dec 30 06:58:14 2014  0 data without images
-Tue Dec 30 06:58:14 2014  0 data without cores
-Tue Dec 30 06:58:14 2014  No duplicate core numbers
-Tue Dec 30 06:58:14 2014  No duplicate image numbers
-Tue Dec 30 06:58:14 2014  No duplicate data numbers
-Tue Dec 30 06:58:14 2014  All done with 2-file_qc.R
+Sat Feb 28 05:53:27 2015  0 images without cores
+Sat Feb 28 05:53:27 2015  0 data without images
+Sat Feb 28 05:53:27 2015  0 data without cores
+Sat Feb 28 05:53:27 2015  No duplicate core numbers
+Sat Feb 28 05:53:27 2015  No duplicate image numbers
+Sat Feb 28 05:53:27 2015  No duplicate data numbers
+Sat Feb 28 05:53:27 2015  All done with 2-file_qc.R
 R version 3.1.2 (2014-10-31)
 Platform: x86_64-apple-darwin10.8.0 (64-bit)
 
@@ -27,9 +27,13 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] magrittr_1.0.1  ggplot2_0.9.3.1
+[1] magrittr_1.5     lubridate_1.3.3  plyr_1.8.1       reshape2_1.4.1  
+[5] ggplot2_1.0.0    dplyr_0.4.1      checkpoint_0.3.8 R6_2.0          
+[9] remake_0.1      
 
 loaded via a namespace (and not attached):
- [1] colorspace_1.2-4 digest_0.6.4     grid_3.1.2       gtable_0.1.2     MASS_7.3-35     
- [6] munsell_0.4.2    plyr_1.8.1       proto_0.3-10     Rcpp_0.11.3      reshape2_1.4    
-[11] scales_0.2.4     stringr_0.6.2    tools_3.1.2     
+ [1] assertthat_0.1   colorspace_1.2-4 crayon_1.1.0     DBI_0.3.1       
+ [5] devtools_1.7.0   digest_0.6.8     grid_3.1.2       gtable_0.1.2    
+ [9] httr_0.6.1       labeling_0.3     MASS_7.3-39      memoise_0.2.1   
+[13] munsell_0.4.2    parallel_3.1.2   proto_0.3-10     Rcpp_0.11.4     
+[17] RCurl_1.95-4.1   scales_0.2.4     stringr_0.6.2    tools_3.1.2     

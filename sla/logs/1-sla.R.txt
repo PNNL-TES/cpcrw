@@ -1,33 +1,10 @@
-Sat Feb 28 05:20:06 2015  Welcome to 1-sla.R
-Sat Feb 28 05:20:06 2015  Opening ./26Aug2014_SLA.csv
-Sat Feb 28 05:20:06 2015  Opening ./../ald/cpcrw_ald.csv
-Sat Feb 28 05:20:06 2015  Opening ./../tree_survey/outputs/npp.csv
-Sat Feb 28 05:20:06 2015  Calculating SLA...
-Sat Feb 28 05:20:06 2015  Assuming ALD values with '>' are 10% greater than max...
-Sat Feb 28 05:20:06 2015  Summarizing SLA...
-Source: local data frame [3 x 7]
-
-  Species   min   max  mean median   sd   n
-1    ALSP 119.1 165.7 165.7  152.7 38.2  30
-2    BEPA 129.3 144.6 144.6  143.8 10.0  11
-3    PIMA  33.6  51.0  51.0   49.3  9.5 120
-Sat Feb 28 05:20:06 2015  Saving outputs//1-sla/sla_summary.csv
-Source: local data frame [6 x 8]
-Groups: Species
-
-  Species Position_m  min  max mean median  sd  n
-1    PIMA          0 33.6 46.4 46.4   47.7 5.5 20
-2    PIMA         15 34.6 44.8 44.8   43.0 5.9 20
-3    PIMA         30 36.9 46.9 46.9   46.5 6.1 20
-4    PIMA         45 40.2 50.8 50.8   49.2 7.0 20
-5    PIMA         60 38.0 52.7 52.7   55.5 8.8 20
-6    PIMA         75 51.0 64.5 64.5   63.1 7.8 20
-Sat Feb 28 05:20:06 2015  Saving outputs//1-sla/pima_summary.csv
-Sat Feb 28 05:20:06 2015  Plotting transect position versus SLA...
-Sat Feb 28 05:20:08 2015  Saving outputs//1-sla/sla1.pdf
-Sat Feb 28 05:20:15 2015  Saving outputs//1-sla/sla2.pdf
-Sat Feb 28 05:20:16 2015  Merging SLA data with LAI and ALD...
-Sat Feb 28 05:20:17 2015  All done with 1-sla.R
+Sat Feb 28 05:53:42 2015  Welcome to 1-sla.R
+Sat Feb 28 05:53:42 2015  Opening ./26Aug2014_SLA.csv
+Sat Feb 28 05:53:42 2015  Opening ./../ald/cpcrw_ald.csv
+Sat Feb 28 05:53:42 2015  Opening ./../tree_survey/outputs/npp.csv
+Sat Feb 28 05:53:42 2015  Calculating SLA...
+Sat Feb 28 05:53:42 2015  Assuming ALD values with '>' are 10% greater than max...
+Sat Feb 28 05:53:42 2015  Summarizing SLA...
 R version 3.1.2 (2014-10-31)
 Platform: x86_64-apple-darwin10.8.0 (64-bit)
 
@@ -38,13 +15,14 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] ggplot2_1.0.0    dplyr_0.4.1      checkpoint_0.3.8
+[1] magrittr_1.5     lubridate_1.3.3  plyr_1.8.1       reshape2_1.4.1  
+[5] ggplot2_1.0.0    dplyr_0.4.1      checkpoint_0.3.8 R6_2.0          
+[9] remake_0.1      
 
 loaded via a namespace (and not attached):
- [1] assertthat_0.1   colorspace_1.2-4 DBI_0.3.1        devtools_1.7.0  
- [5] digest_0.6.8     evaluate_0.5.5   formatR_1.0      grid_3.1.2      
- [9] gtable_0.1.2     httr_0.6.1       knitr_1.9        labeling_0.3    
-[13] lazyeval_0.1.10  magrittr_1.5     MASS_7.3-39      munsell_0.4.2   
-[17] parallel_3.1.2   plyr_1.8.1       proto_0.3-10     R6_2.0.1        
-[21] Rcpp_0.11.4      RCurl_1.95-4.1   reshape2_1.4.1   scales_0.2.4    
-[25] stringr_0.6.2    tools_3.1.2     
+ [1] assertthat_0.1   colorspace_1.2-4 crayon_1.1.0     DBI_0.3.1       
+ [5] devtools_1.7.0   digest_0.6.8     grid_3.1.2       gtable_0.1.2    
+ [9] httr_0.6.1       labeling_0.3     lazyeval_0.1.10  MASS_7.3-39     
+[13] memoise_0.2.1    munsell_0.4.2    parallel_3.1.2   proto_0.3-10    
+[17] Rcpp_0.11.4      RCurl_1.95-4.1   scales_0.2.4     stringr_0.6.2   
+[21] tools_3.1.2     
