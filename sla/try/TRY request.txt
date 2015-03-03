@@ -1,0 +1,22 @@
+Monday, March 02, 2015 7:27 AM
+
+From: TryAdmin@bgc-jena.mpg.de
+
+Dear Benjamin Bond-Lamberty
+You are an author of the following data request to TRY (http://www.try-db.org).
+
+TRY Data Request 662
+Only public data were requested.
+Title:
+SLA for two boreal trees
+Authors:
+Benjamin Bond-Lamberty (Joint Global Change Research Institute) PI
+Trait List:
+11,
+Species List:
+41927, 7355,
+Description:
+As part of an analysis of how soil carbon cycling and plant traits change across a boreal permafrost gradient, were interested in seeing other measured SLA (specific leaf area) values for two boreal species, Picea mariana (black spruce) and Betula papyrifera (paper birch). TRY data would be used for comparison.
+
+Cheers
+Gerhard Boenisch, Jens Kattge, MPI-BGC
