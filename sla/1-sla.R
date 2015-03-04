@@ -49,7 +49,11 @@ clean_ald <- function(ald) {
 # -----------------------------------------------------------------------------
 # Clean leaf area index (LAI) data
 clean_lai <- function(lai) {
-    lai
+    # Create a 75 m position in these data by duplicating 70
+    printlog("Creating 75m position LAI data...")
+    lai75 <- subset(lai, Position_m==70)
+    lai75$Position_m <- 75
+    rbind(lai, lai75)
 } # clean_lai
 
 # -----------------------------------------------------------------------------
