@@ -35,15 +35,17 @@ cpcrw <- subset(cpcrw, Species %in% c("PIMA", "BEPA"))
 cpcrw$SpeciesName <- "Picea mariana"
 cpcrw$SpeciesName[cpcrw$Species=="BEPA"] <- "Betula papyrifera"
 
-try1 <- subset(try_data, TraitID==11)
-p <- ggplot(try1, aes(SpeciesName, StdValue)) + geom_violin()
+printlog("Plotting...")
+try1 <- subset(try_data, TraitID==11)  # 11=SLA in TRY
+print(summary(try1))
+p <- ggplot(try1, aes(SpeciesName, StdValue)) + geom_violin(color="grey")
 p <- p + geom_point(position="jitter", color="grey")
-p <- p + geom_point(data=cpcrw, aes(y=SLA/10, color=Position_m), 
+p <- p + geom_point(data=cpcrw, aes(y=SLA/10, color=Depth_cm), 
                     position="jitter")
 p <- p + xlab("Species") + ylab(expression(SLA~(cm^2~g^{-1}))) 
-p <- p + scale_color_continuous("Position")
+p <- p + scale_color_continuous("ALD (cm)")
 print(p)
-save_plot("try_comparison")
+save_plot("try_comparison1")
 
 printlog("All done with", SCRIPTNAME)
 print(sessionInfo())
