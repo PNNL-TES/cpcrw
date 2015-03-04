@@ -10,7 +10,7 @@
 source("../0-functions.R")
 
 SCRIPTNAME  <- "1-sla.R"
-SLA_DATA    <- "26Aug2014_SLA.csv"
+RAW_DATA    <- "26Aug2014_SLA.csv"
 ALD_DATA    <- "../ald/cpcrw_ald.csv"
 LAI_DATA    <- "../tree_survey/outputs/npp.csv"
 
@@ -95,7 +95,7 @@ sink(paste(LOG_DIR, paste0(SCRIPTNAME, ".txt"), sep="/"), split=T)
 printlog("Welcome to", SCRIPTNAME)
 
 # Load and clean SLA, ALD, and LAI datasets
-sla <- read_csv(SLA_DATA)
+sla <- read_csv(RAW_DATA)
 ald <- read_csv(ALD_DATA)
 lai <- read_csv(LAI_DATA)
 
@@ -109,6 +109,8 @@ summarize_sla(sla)
 # Data merge
 printlog("Merging SLA data with LAI and ALD...")
 sla_merged <- sla %>% merge(ald) %>% merge(lai)
+
+save_data(sla_merged, scriptfolder=FALSE)
 
 printlog("All done with", SCRIPTNAME)
 print(sessionInfo())
