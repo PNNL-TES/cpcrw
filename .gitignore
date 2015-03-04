@@ -14,6 +14,8 @@
 *.jpg
 *.tiff
 
-.Rproj.user
-
+# Script outputs
 *.html
+logs/
+outputs/
+
