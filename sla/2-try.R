@@ -7,7 +7,7 @@ source("../0-functions.R")
 
 SCRIPTNAME  <- "2-try.R"
 SLA_DATA    <- "outputs/sla_merged.csv"
-TRY_DATA    <- "try/662.csv"
+TRY_DATA    <- "try/681.csv"
 
 # -----------------------------------------------------------------------------
 # Packages and reproducibility
