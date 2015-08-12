@@ -1,45 +1,148 @@
-Thu Jan 22 14:58:20 2015  Welcome to 2-npp.R
-Thu Jan 22 14:58:20 2015  Opening ./../tree_cores/outputs/increment_models.csv
-Thu Jan 22 14:58:23 2015  Opening ./tree_survey.csv
-Thu Jan 22 14:58:24 2015  tree_survey rows = 955 cols = 7
-Thu Jan 22 14:58:24 2015  Eliminating dead trees...
-Thu Jan 22 14:58:24 2015  tree_survey rows = 921 cols = 6
-Thu Jan 22 14:58:24 2015  Merging tree survey data with increment models from coring...
-Thu Jan 22 14:58:24 2015  Computing increments...
-Thu Jan 22 14:58:24 2015  Computing biomass...
-Thu Jan 22 14:58:24 2015  Computing NPP...
- Transect   Position_m       npp_gC      
- T5  :8   Min.   : 0.0   Min.   :  0.00  
- T6  :8   1st Qu.:17.5   1st Qu.: 32.32  
- T7  :8   Median :35.0   Median : 71.08  
- T8  :8   Mean   :35.0   Mean   :126.56  
- T9  :8   3rd Qu.:52.5   3rd Qu.:186.72  
- T10 :8   Max.   :70.0   Max.   :407.43  
- NA's:1   NA's   :1                      
-Thu Jan 22 14:58:24 2015  Saving outputs//npp.csv
-Thu Jan 22 14:58:25 2015  Plotting...
-Thu Jan 22 14:58:28 2015  Saving outputs//2-npp/npp1.pdf
-Thu Jan 22 14:58:34 2015  Saving outputs//2-npp/npp2.pdf
-Thu Jan 22 14:58:35 2015  Doing species-specific plots...
-Thu Jan 22 14:58:39 2015  Saving outputs//2-npp/npp3.pdf
-Thu Jan 22 14:58:39 2015  All done with 2-npp.R
-R version 3.1.2 (2014-10-31)
-Platform: x86_64-apple-darwin10.8.0 (64-bit)
+Sun Aug  9 05:50:29 2015  Welcome to 2-npp.R
+Sun Aug  9 05:50:29 2015  Opening ./../tree_cores/outputs/increment_models.csv
+Sun Aug  9 05:50:29 2015  Opening ./tree_survey.csv
+Sun Aug  9 05:50:29 2015  tree_survey rows = 955 cols = 7
+Sun Aug  9 05:50:29 2015  Eliminating dead trees...
+Sun Aug  9 05:50:29 2015  tree_survey rows = 921 cols = 6
+Sun Aug  9 05:50:29 2015  Merging tree survey data with increment models from coring...
+Sun Aug  9 05:50:29 2015  Opening ./allometry//Alexander_2012_Appendix_A.csv
+Sun Aug  9 05:50:29 2015  Opening ./allometry//Bond-Lamberty_2002_Larix.csv
+Sun Aug  9 05:50:29 2015  NOTE we are treating all PIMA (black spruce) >10 cm DBH as PIGL (white spruce)
+Sun Aug  9 05:50:29 2015  Merging survey data with allometry...
+Sun Aug  9 05:50:29 2015  Computing increments...
+Sun Aug  9 05:50:29 2015  Computing biomass...
+Sun Aug  9 05:50:29 2015  Computing NPP...
+ Transect   Position_m       npp_gC       
+ T5  :8   Min.   : 0.0   Min.   :   0.00  
+ T6  :8   1st Qu.:17.5   1st Qu.:  45.06  
+ T7  :8   Median :35.0   Median :  82.76  
+ T8  :8   Mean   :35.0   Mean   : 360.72  
+ T9  :8   3rd Qu.:52.5   3rd Qu.: 495.03  
+ T10 :8   Max.   :70.0   Max.   :1927.71  
+ NA's:1   NA's   :1                       
+Sun Aug  9 05:50:29 2015  Saving outputs//npp.csv
+Sun Aug  9 05:50:44 2015  Plotting...
 
-locale:
-[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+The downloaded binary packages are in
+	/var/folders/jl/gn9f6wd95dd0s53s396fy9p86dyn5r/T//RtmpPTHwvD/downloaded_packages
+Source: local data frame [6 x 3]
+Groups: Transect
 
-attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
+  Transect Position_m     npp_gC
+1      T10          0   31.26705
+2      T10         10   45.66574
+3      T10         20   82.75910
+4      T10         30  706.69219
+5      T10         40 1140.52594
+6      T10         50 1927.71290
+[1] T10  T5   T6   T7   T8   T9   <NA>
+Levels: T5 T6 T7 T8 T9 T10
+Source: local data frame [1 x 3]
+Groups: Transect
 
-other attached packages:
-[1] reshape2_1.4  dplR_1.6.2    magrittr_1.5  dplyr_0.4.1   ggplot2_1.0.0
-
-loaded via a namespace (and not attached):
- [1] assertthat_0.1.0.99 codetools_0.2-10    colorspace_1.2-4    compiler_3.1.2     
- [5] DBI_0.3.1           digest_0.6.4        foreach_1.4.2       gmp_0.5-12         
- [9] grid_3.1.2          gtable_0.1.2        iterators_1.0.7     labeling_0.2       
-[13] lattice_0.20-29     lazyeval_0.1.10     MASS_7.3-35         munsell_0.4.2      
-[17] parallel_3.1.2      plyr_1.8.1          png_0.1-7           proto_0.3-10       
-[21] R6_2.0              Rcpp_0.11.3         scales_0.2.4        stringi_0.4-1      
-[25] stringr_0.6.2       tools_3.1.2         XML_3.98-1.1       
+  Transect Position_m npp_gC
+1       NA         NA      0
+ Transect   Position_m       npp_gC       
+ T5  :8   Min.   : 0.0   Min.   :   0.00  
+ T6  :8   1st Qu.:17.5   1st Qu.:  45.06  
+ T7  :8   Median :35.0   Median :  82.76  
+ T8  :8   Mean   :35.0   Mean   : 360.72  
+ T9  :8   3rd Qu.:52.5   3rd Qu.: 495.03  
+ T10 :8   Max.   :70.0   Max.   :1927.71  
+ NA's:1   NA's   :1                       
+Sun Aug  9 06:00:59 2015  Opening ./../transects/CPCRW_2014_Transect_Positions.csv
+  Transect Position.S.to.N_m
+1        5                 0
+2        6                 8
+3        7                28
+4        8                40
+5        9                48
+6       10                68
+[1] "T5"  "T6"  "T7"  "T8"  "T9"  "T10"
+  Transect Position_m     npp_gC Position.S.to.N_m
+1      T10          0   31.26705                68
+2      T10         20   82.75910                68
+3      T10         30  706.69219                68
+4      T10         40 1140.52594                68
+5      T10         10   45.66574                68
+6      T10         60  302.48499                68
+[1] 48
+   Transect Position_m     npp_gC Position.S.to.N_m
+1       T10          0   31.26705                68
+2       T10         20   82.75910                68
+3       T10         30  706.69219                68
+4       T10         40 1140.52594                68
+5       T10         10   45.66574                68
+6       T10         60  302.48499                68
+7       T10         70  621.43976                68
+8       T10         50 1927.71290                68
+9        T5          0   45.06429                 0
+10       T5         20   33.95586                 0
+11       T5         30   33.76854                 0
+12       T5         40   46.03920                 0
+13       T5         50  567.34269                 0
+14       T5         60  386.47764                 0
+15       T5         70  886.23811                 0
+16       T5         10   56.52880                 0
+17       T6          0   30.61815                 8
+18       T6         10   27.62233                 8
+19       T6         30   38.01113                 8
+20       T6         40   51.01369                 8
+21       T6         50  264.92704                 8
+22       T6         20   21.85731                 8
+23       T6         70   62.00138                 8
+24       T6         60  364.63381                 8
+25       T7          0   30.33157                28
+26       T7         10   31.46556                28
+27       T7         20   47.39147                28
+28       T7         40   94.23276                28
+29       T7         50  724.55859                28
+30       T7         60  333.61583                28
+31       T7         30   47.91853                28
+32       T7         70 1233.31119                28
+33       T8          0   36.59855                40
+34       T8         10   63.69960                40
+35       T8         20   82.13410                40
+36       T8         40  396.64746                40
+37       T8         50  431.49590                40
+38       T8         60 1558.91383                40
+39       T8         70  943.32339                40
+40       T8         30  205.65769                40
+41       T9         10   54.64668                48
+42       T9         20   70.68748                48
+43       T9         30  145.06077                48
+44       T9          0   28.15239                48
+45       T9         50 1290.59614                48
+46       T9         60  495.02823                48
+47       T9         70 1068.66456                48
+48       T9         40  486.58745                48
+  model     psill    range
+1   Nug 0.0506555   0.0000
+2   Sph 0.5906009 896.9702
+    np       dist     gamma dir.hor dir.ver   id
+1   57   79.29244 0.1234479       0       0 var1
+2  299  163.97367 0.2162185       0       0 var1
+3  419  267.36483 0.3027859       0       0 var1
+4  457  372.73542 0.4121448       0       0 var1
+5  547  478.47670 0.4634128       0       0 var1
+6  533  585.34058 0.5646933       0       0 var1
+7  574  693.14526 0.5689683       0       0 var1
+8  564  796.18365 0.6186769       0       0 var1
+9  589  903.14650 0.6471479       0       0 var1
+10 543 1011.29177 0.6915705       0       0 var1
+11 500 1117.86235 0.7033984       0       0 var1
+12 477 1221.32810 0.6038770       0       0 var1
+13 452 1329.16407 0.6517158       0       0 var1
+14 457 1437.25620 0.5665318       0       0 var1
+15 415 1543.20248 0.5748227       0       0 var1
+[1] "Transect"          "Position_m"        "npp_gC"            "Position.S.to.N_m"
+  np     dist     gamma dir.hor dir.ver   id
+1 16  8.00000 0.3546585       0       0 var1
+2 42 10.00000 0.4656719       0       0 var1
+3 36 12.62708 0.4068302       0       0 var1
+4 14 15.62050 0.4845982       0       0 var1
+5 84 20.44019 0.8087190       0       0 var1
+6 54 22.57471 0.7144327       0       0 var1
+7 16 28.00000 0.2911108       0       0 var1
+8 94 29.26312 1.2278218       0       0 var1
+9 38 31.58097 1.6473883       0       0 var1
