@@ -14,8 +14,8 @@ TREE_SURVEY     <- "tree_survey.csv"
 # -----------------------------------------------------------------------------
 # Packages and reproducibility
 
-library(checkpoint)  # version 0.3.8
-checkpoint("2015-02-27")
+#library(checkpoint)  # version 0.3.8
+#checkpoint("2015-02-27")
 library(ggplot2)
 theme_set(theme_bw())
 
@@ -32,7 +32,7 @@ d <- d[d$Status=="Alive",]
 d$Transect <- factor(d$Transect, levels=c("T5","T6","T7","T8","T9","T10"))
 
 library(plyr)
-library(reshape)
+library(reshape2)
 
 d$BA <- (d$DBH_cm / 2 / 100) ^ 2 * pi # basal area in m2
 
@@ -57,6 +57,12 @@ p <- qplot(Position_m, value, data=d2, color=Transect)+geom_smooth(method='lm', 
 p <- p + geom_smooth(group=1, color='darkgrey', method='lm')
 print(p)
 save_plot("vegsurvey1")
+
+p <- qplot(Position_m, value, data=d2, geom="boxplot", group=Position_m) +
+    facet_grid(variable~., scales="free") +
+    xlab("Transect position (m)")
+print(p)
+save_plot("vegsurvey2")
 
 #tpos <- data.frame(Transect=levels(d2$Transect),TPosition=c(0,8,28,40,48,68))
 #d2 <- merge(d, tpos)
