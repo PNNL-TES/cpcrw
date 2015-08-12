@@ -71,7 +71,7 @@ printlog("Mapping...")
 mapcpcrw <- get_map(location = c(lon = mean(plots$Lon), lat = mean(plots$Lat)), 
                     zoom = 12, maptype = "satellite", scale = 2)
 p <- ggmap(mapcpcrw) + geom_point(data=plots, aes(x=Lon, y=Lat), color="red")
-# p + geom_text(data=plots, aes(Lon, Lat, label=Plot), color="red", size=4, hjust=.5, vjust=-.5)
+p <- p + geom_text(data=plots, aes(Lon, Lat, label=Plot), color="red", size=4, hjust=.5, vjust=-.5)
 print(p)
 save_plot("extensive_map")
 
