@@ -1,70 +1,0 @@
-Sat Feb 28 05:53:09 2015  Welcome to 1-coring_check.R
-  |                                                                                     |                                                                             |   0%  |                                                                                     |=============                                                                |  17%  |                                                                                     |==========================                                                   |  33%  |                                                                                     |======================================                                       |  50%  |                                                                                     |===================================================                          |  67%  |                                                                                     |================================================================             |  83%  |                                                                                     |=============================================================================| 100%
-Sat Feb 28 05:53:27 2015  Welcome to 2-file_qc.R
-Sat Feb 28 05:53:27 2015  Reading image list...
-Sat Feb 28 05:53:27 2015  Reading data list...
-Sat Feb 28 05:53:27 2015  Reading tree core list...
-Sat Feb 28 05:53:27 2015  276 cores listed in tree_cores.csv
-Sat Feb 28 05:53:27 2015  269 image files found in core_images/
-Sat Feb 28 05:53:27 2015  269 data files found in core_data/
-Sat Feb 28 05:53:27 2015  269 cores with images
-Sat Feb 28 05:53:27 2015  269 cores with data
-Sat Feb 28 05:53:27 2015  269 images with data
-Sat Feb 28 05:53:27 2015  7 cores without images
-[1] "193" "197" "239" "244" "254" "260" "267"
-Sat Feb 28 05:53:27 2015  0 images without cores
-Sat Feb 28 05:53:27 2015  0 data without images
-Sat Feb 28 05:53:27 2015  0 data without cores
-Sat Feb 28 05:53:27 2015  No duplicate core numbers
-Sat Feb 28 05:53:27 2015  No duplicate image numbers
-Sat Feb 28 05:53:27 2015  No duplicate data numbers
-Sat Feb 28 05:53:27 2015  All done with 2-file_qc.R
-R version 3.1.2 (2014-10-31)
-Platform: x86_64-apple-darwin10.8.0 (64-bit)
-
-locale:
-[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
-
-attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
-
-other attached packages:
-[1] magrittr_1.5     lubridate_1.3.3  plyr_1.8.1       reshape2_1.4.1  
-[5] ggplot2_1.0.0    dplyr_0.4.1      checkpoint_0.3.8 R6_2.0          
-[9] remake_0.1      
-
-loaded via a namespace (and not attached):
- [1] assertthat_0.1   colorspace_1.2-4 crayon_1.1.0     DBI_0.3.1       
- [5] devtools_1.7.0   digest_0.6.8     grid_3.1.2       gtable_0.1.2    
- [9] httr_0.6.1       labeling_0.3     MASS_7.3-39      memoise_0.2.1   
-[13] munsell_0.4.2    parallel_3.1.2   proto_0.3-10     Rcpp_0.11.4     
-[17] RCurl_1.95-4.1   scales_0.2.4     stringr_0.6.2    tools_3.1.2     
-  |                                                                                     |                                                                             |   0%  |                                                                                     |=============================================================================| 100%
-Sat Feb 28 05:53:42 2015  Welcome to 1-sla.R
-Sat Feb 28 05:53:42 2015  Opening ./26Aug2014_SLA.csv
-Sat Feb 28 05:53:42 2015  Opening ./../ald/cpcrw_ald.csv
-Sat Feb 28 05:53:42 2015  Opening ./../tree_survey/outputs/npp.csv
-Sat Feb 28 05:53:42 2015  Calculating SLA...
-Sat Feb 28 05:53:42 2015  Assuming ALD values with '>' are 10% greater than max...
-Sat Feb 28 05:53:42 2015  Summarizing SLA...
-R version 3.1.2 (2014-10-31)
-Platform: x86_64-apple-darwin10.8.0 (64-bit)
-
-locale:
-[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
-
-attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
-
-other attached packages:
-[1] magrittr_1.5     lubridate_1.3.3  plyr_1.8.1       reshape2_1.4.1  
-[5] ggplot2_1.0.0    dplyr_0.4.1      checkpoint_0.3.8 R6_2.0          
-[9] remake_0.1      
-
-loaded via a namespace (and not attached):
- [1] assertthat_0.1   colorspace_1.2-4 crayon_1.1.0     DBI_0.3.1       
- [5] devtools_1.7.0   digest_0.6.8     grid_3.1.2       gtable_0.1.2    
- [9] httr_0.6.1       labeling_0.3     lazyeval_0.1.10  MASS_7.3-39     
-[13] memoise_0.2.1    munsell_0.4.2    parallel_3.1.2   proto_0.3-10    
-[17] Rcpp_0.11.4      RCurl_1.95-4.1   scales_0.2.4     stringr_0.6.2   
-[21] tools_3.1.2     

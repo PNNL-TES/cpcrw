@@ -16,7 +16,7 @@
 
 # Script outputs
 *.html
-*/logs/
-*/outputs/
+logs/
+outputs/
 
 .Rproj.user
