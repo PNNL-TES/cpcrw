@@ -59,7 +59,6 @@ sink(paste(LOG_DIR, paste0(SCRIPTNAME, ".txt"), sep="/"), split=T)
 printlog("Welcome to", SCRIPTNAME)
 
 library(dplyr)  # 0.4
-library(magrittr)
 library(reshape2)
 library(dplR)  # 1.6.2
 library(ggplot2)
@@ -87,7 +86,6 @@ save_plot("chronology-recent")
 
 
 printlog("Building chronologies for different hillslope positions...")
-
 pos <- 50
 printlog("**** High cores ****")
 chron_high <- build_chronology(subset(coredata, Position_m > pos))
@@ -97,14 +95,32 @@ chron_low <- build_chronology(subset(coredata, Position_m <= pos))
 chron_low$Position <- "Low"
 chron_position <- rbind(chron_high, chron_low)
 printlog("Plotting...")
-
 p <- ggplot(chron_position, aes(Year, xxxstd, color=Position)) + geom_line() + geom_point()
-#p <- p + geom_ribbon(aes(ymin=min, ymax=max), alpha=.2) 
-#p <- p + geom_ribbon(aes(ymin=xxxstd-sd, ymax=xxxstd+sd), alpha=0.5)
 p <- p + ylab("Detrended mean index (unitless)")
 p <- p + coord_cartesian(xlim=c(1935, 2015), ylim=c(0.7, 1.4))
 print(p)
 save_plot("chronology_position")
+
+printlog("Building chronologies for different spruce hillslope positions...")
+pos <- 50
+printlog("**** High cores ****")
+chron_high <- build_chronology(subset(coredata, Species == "PIMA" & Position_m > pos))
+chron_high$Position <- "High"
+printlog("**** Low cores ****")
+chron_low <- build_chronology(subset(coredata, Species == "PIMA" & Position_m <= pos))
+chron_low$Position <- "Low"
+chron_position_spruce <- rbind(chron_high, chron_low)
+printlog("Plotting...")
+p <- ggplot(chron_position_spruce, aes(Year, xxxstd, color=Position)) + geom_line() 
+p <- p + geom_point()
+p <- p + ylab("Detrended mean index (unitless)")
+p <- p + coord_cartesian(xlim=c(1965, 2015), ylim=c(0.7, 1.2))
+p <- p + annotate("text", x = 2000, y = 1.15, color = "#F8766D", fontface = "bold",
+                  label = paste("High spruce s.d. = ", round(sd(chron_high$xxxstd), 2)))
+p <- p + annotate("text", x = 2000, y = 0.75, color = "#00BFC4", fontface = "bold", 
+                  label = paste("Low spruce s.d. = ", round(sd(chron_low$xxxstd), 2)))
+print(p)
+save_plot("chronology_position_spruce")
 
 
 printlog("Building chronologies for different species...")
@@ -125,6 +141,7 @@ p <- p + ylab("Detrended mean index (unitless)")
 p <- p + coord_cartesian(xlim=c(1935, 2015), ylim=c(0.8, 1.2))
 print(p)
 save_plot("chronology_species")
+
 
 printlog("All done with", SCRIPTNAME)
 print(sessionInfo())
