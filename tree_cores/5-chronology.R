@@ -68,7 +68,7 @@ coredata <- read_csv(COREDATA)
 printdims(coredata)
 
 chronology <- build_chronology(coredata)
-save_data(chronology)
+save_data(chronology, scriptfolder = FALSE)
 
 printlog("Plotting...")
 p <- ggplot(chronology, aes(Year, xxxstd)) + geom_line()
