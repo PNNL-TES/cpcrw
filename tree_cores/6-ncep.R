@@ -56,17 +56,31 @@ printlog("Merging air and precip data...")
 ncepdata <- merge(airdata, precipdata)
 print(summary(ncepdata))
 
+printlog("Fitting segmented models...")
+library(segmented)
+m1 <- lm(air ~ year, data = annual)
+m1.seg <- segmented(m1, seg.Z = ~year)
+brk1 <- summary(m1.seg)$psi[2]
+m2 <- lm(pr_wtr ~ year, data = annual)
+m2.seg <- segmented(m2, seg.Z = ~year)
+brk2 <- summary(m2.seg)$psi[2]
+
 printlog("Plotting...")
 ncepdata %>% 
     group_by(year) %>% 
     summarise(air = mean(air), pr_wtr = sum(pr_wtr)) -> 
-    x
-p1 <- qplot(year, air, data=x) + geom_smooth()
+    annual
+p1 <- qplot(year, air, data = annual) #+ geom_smooth()
 p1 <- p1 + xlab("Year") + ylab("Air temperature (°C)")
+p1 <- p1 + geom_smooth(method = 'lm', data = subset(annual, year <= brk1))
+p1 <- p1 + geom_smooth(method = 'lm', data = subset(annual, year >= brk1))
 print(p1)
 save_plot("air")
-p2 <- qplot(year, pr_wtr, data=x) + geom_smooth()
+
+p2 <- qplot(year, pr_wtr, data = annual) #+ geom_smooth()
 p2 <- p2 + xlab("Year") + ylab("Precipition (cm)")
+p2 <- p2 + geom_smooth(method = 'lm', data = subset(annual, year <= brk2))
+p2 <- p2 + geom_smooth(method = 'lm', data = subset(annual, year >= brk2))
 print(p2)
 save_plot("pr_wtr")
 

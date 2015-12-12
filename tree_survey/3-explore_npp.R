@@ -17,8 +17,8 @@ ALD_DATA            <- "../ald/cpcrw_ald.csv"
 # -----------------------------------------------------------------------------
 # Packages and reproducibility
 
-library(checkpoint)  # version 0.3.8
-checkpoint("2015-02-27")
+#library(checkpoint)  # version 0.3.8
+#checkpoint("2015-02-27")
 library(dplyr)
 library(ggplot2)
 theme_set(theme_bw())
@@ -60,6 +60,8 @@ p1a <- p1a + xlab("Transect position (m)") + ylab("Maximum ALD (cm)")
 p1a <- p1a + geom_hline(yintercept=150, linetype=2)
 print(p1a)
 save_plot("ald2")
+print(p1a + scale_y_reverse())
+save_plot("ald2-yrev")
 
 npp_summary <- na.omit(npp) %>%
     group_by(Position_m) %>%

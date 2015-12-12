@@ -121,7 +121,8 @@ p <- p + annotate("text", x = 2000, y = 0.75, color = "#00BFC4", fontface = "bol
                   label = paste("Low spruce s.d. = ", round(sd(chron_low$xxxstd), 2)))
 print(p)
 save_plot("chronology_position_spruce")
-
+save_data(chron_low, scriptfolder = FALSE)
+save_data(chron_high, scriptfolder = FALSE)
 
 printlog("Building chronologies for different species...")
 
